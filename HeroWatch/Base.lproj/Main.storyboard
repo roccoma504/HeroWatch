@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0gT-F7-vcI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeroWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="HeroWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeroWatch is powered by the LootBox API and is in no way affiliated with Blizzard.   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmI-o4-kq6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to OverWatch. A quick way to check you and your friends OverWatch stats across all platforms." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85t-Ck-ucE">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qmI-o4-kq6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="471" id="2jv-ne-ntf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qmI-o4-kq6" secondAttribute="bottom" constant="20" id="7MB-Tl-6v2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="85t-Ck-ucE" secondAttribute="bottom" constant="264" id="ACd-ZQ-IaP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="85t-Ck-ucE" secondAttribute="trailing" id="AFF-zy-hsc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qmI-o4-kq6" secondAttribute="trailing" id="KWX-Ck-equ"/>
+                            <constraint firstItem="qmI-o4-kq6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="Qbm-S5-EJV"/>
+                            <constraint firstItem="85t-Ck-ucE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="WkD-TH-ILm"/>
+                            <constraint firstItem="85t-Ck-ucE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="r0I-L4-LTn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qmI-o4-kq6"/>
+                                <exclude reference="85t-Ck-ucE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AFF-zy-hsc"/>
+                                <exclude reference="WkD-TH-ILm"/>
+                                <exclude reference="r0I-L4-LTn"/>
+                                <exclude reference="2jv-ne-ntf"/>
+                                <exclude reference="KWX-Ck-equ"/>
+                                <exclude reference="Qbm-S5-EJV"/>
+                                <exclude reference="7MB-Tl-6v2"/>
+                                <exclude reference="ACd-ZQ-IaP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qmI-o4-kq6"/>
+                                <include reference="85t-Ck-ucE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AFF-zy-hsc"/>
+                                <include reference="WkD-TH-ILm"/>
+                                <include reference="r0I-L4-LTn"/>
+                                <include reference="2jv-ne-ntf"/>
+                                <include reference="KWX-Ck-equ"/>
+                                <include reference="Qbm-S5-EJV"/>
+                                <include reference="7MB-Tl-6v2"/>
+                                <include reference="ACd-ZQ-IaP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="CAa-Od-t07">
+                        <barButtonItem key="leftBarButtonItem" title="API Info" id="1uS-Lh-CEe">
+                            <connections>
+                                <action selector="apiButtonClick:" destination="BYZ-38-t0r" id="Ho6-zS-fq1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Xdf-8J-Vec"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blizzardLabel" destination="qmI-o4-kq6" id="5Qz-dQ-3lj"/>
+                        <outlet property="welcomeLabel" destination="85t-Ck-ucE" id="kzN-Zy-24Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1074" y="1135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rsz-Ge-JPz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0gT-F7-vcI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9fH-G9-PUB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ykq-kz-Ja9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpf-PM-OS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="1135"/>
         </scene>
     </scenes>
 </document>
