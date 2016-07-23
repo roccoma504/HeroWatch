@@ -19,6 +19,15 @@ import UIKit
 let PRIMARY_COLOR = FlatOrangeDark()
 let SECONDARY_COLOR = FlatBlue()
 
+//
+// Platform Constants
+//
+
+let CONSOLE_ARRAY = ["psn","xbl","pc"]
+let REGION_ARRAY = ["eu", "us", "kr", "cn", "global"]
+
+let BASE_URL = "https://api.lootbox.eu"
+
 
 //
 // Hero related constants
@@ -59,5 +68,6 @@ let heroImageMap = ["Soldier: 76":"soldier_76.png",
                     "Symmetra":"symmetra.png",
                     "Lucio":"lucio.png",
                     "Reinhardt":"reinhardt.png"]
+
 
 

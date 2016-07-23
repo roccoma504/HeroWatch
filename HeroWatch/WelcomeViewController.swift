@@ -11,8 +11,8 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var blizzardLabel: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
