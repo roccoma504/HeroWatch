@@ -65,7 +65,7 @@ class SummaryTableViewController: UITableViewController {
             }
             else {
                 self.fetchImage(json["data"]!["competitive"]!!["rank_img"] as! String, kind : .ranked)
-                self.fetchImage(json["data"]!["competitive"]!!["avatar"] as! String, kind : .avatar)
+                self.fetchImage(json["data"]!["avatar"] as! String, kind : .avatar)
                 self.rank = json["data"]!["competitive"]!!["rank"] as! String
                 self.quickPlayLevel = String(json["data"]!["level"] as! Int)
             }
@@ -113,6 +113,8 @@ class SummaryTableViewController: UITableViewController {
             tempCell.quickLevel.text = quickPlayLevel
             tempCell.competLevel.text = rank
             tempCell.competImage.image = rankImage
+            tempCell.avatarImage.image = avatarImage
+
             tempCell.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
             cell = tempCell
         }
