@@ -10,7 +10,34 @@ import UIKit
 
 class JSONUtilities {
     
-    static func retrieve(url : NSURL, completion: (json: [String : AnyObject]!, error: NSError?) ->()){
+    /** Downloads the data from the URL.
+     - Parameters:
+     - url - URL where we want to download the image
+     */
+    private static func getDataFromUrl(url:NSURL,
+                                completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    /**
+     Downloads an image from a given URL.
+     - Parameters:
+     - url - URL where we want to download the image
+     */
+    static func downloadImage(url : NSURL, completion: (image : UIImage, error: NSError?) -> Void) -> () {
+        getDataFromUrl(url) { (data, response, error)  in
+            guard let data = data where error == nil else {
+                print("error downloading picture")
+                return }
+            print("image downloaded")
+            completion(image: UIImage(data: data)!, error: error)
+        }
+    }
+
+    
+    static func retrieve(url : NSURL, completion: (json: [String : AnyObject]!, error: NSError?) -> ()){
         var retrievedData : [String : AnyObject]!
         
         let request = NSMutableURLRequest(URL: url)
