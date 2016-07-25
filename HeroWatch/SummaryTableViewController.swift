@@ -106,14 +106,17 @@ class SummaryTableViewController: UITableViewController {
         var cell : UITableViewCell!
         
         if indexPath.row == 0 && avatarImageValid && rankedImageValid {
-            print("in here stupid")
             
             let tempCell = tableView.dequeueReusableCellWithIdentifier("nameCell", forIndexPath: indexPath) as! NameTableViewCell
-            tempCell.nameLabel.text = prefs.stringForKey("id")
-            tempCell.quickLevel.text = quickPlayLevel
-            tempCell.competLevel.text = rank
+            tempCell.nameLabel.text = prefs.stringForKey("id")?.uppercaseString
+            tempCell.regionLabel.text = prefs.stringForKey("region")?.uppercaseString
+            tempCell.consoleLabel.text = prefs.stringForKey("console")?.uppercaseString
+            tempCell.quickLevel.text = "QP: " + quickPlayLevel
+            tempCell.competLevel.text = "RP: " + rank
             tempCell.competImage.image = rankImage
             tempCell.avatarImage.image = avatarImage
+            tempCell.avatarImage.layer.cornerRadius = 16.0
+            tempCell.avatarImage.clipsToBounds = true
 
             tempCell.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
             cell = tempCell
@@ -123,7 +126,7 @@ class SummaryTableViewController: UITableViewController {
             tempCell.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
             tempCell.contentView.backgroundColor = ClearColor()
             
-            tempCell.nameLabel.text = "LOADING ..."
+            tempCell.nameLabel.text = "LOADING..."
             cell = tempCell
         }
         

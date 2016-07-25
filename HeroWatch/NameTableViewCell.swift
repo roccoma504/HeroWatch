@@ -15,6 +15,8 @@ class NameTableViewCell: UITableViewCell {
     @IBOutlet weak var competLevel: UILabel!
     @IBOutlet weak var competImage: UIImageView!
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var consoleLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
