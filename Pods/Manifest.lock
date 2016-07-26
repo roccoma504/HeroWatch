@@ -2,11 +2,14 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - CorePlot (2.1)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - CorePlot (~> 2.1)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CorePlot: ab9898c79b94999018e9634ab0aa4c21480c8552
 
 COCOAPODS: 0.38.2

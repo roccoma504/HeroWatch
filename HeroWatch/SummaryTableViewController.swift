@@ -18,6 +18,7 @@ class SummaryTableViewController: UITableViewController {
     private var quickPlayLevel : String!
     private var avatarImageValid = false
     private var rankedImageValid = false
+    private var drawn = false
 
     enum imageKind {
         case avatar
@@ -45,7 +46,7 @@ class SummaryTableViewController: UITableViewController {
                     self.rankImage = image
                     self.rankedImageValid = true
                 }
-                self.updateTable()
+                //self.updateTable()
             }
         }
         
@@ -98,7 +99,7 @@ class SummaryTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     
@@ -117,9 +118,39 @@ class SummaryTableViewController: UITableViewController {
             tempCell.avatarImage.image = avatarImage
             tempCell.avatarImage.layer.cornerRadius = 16.0
             tempCell.avatarImage.clipsToBounds = true
-
+            
             tempCell.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
             cell = tempCell
+        }
+            
+        else if indexPath.row == 1 && !drawn {
+            
+            let tempCell = tableView.dequeueReusableCellWithIdentifier("statCell", forIndexPath: indexPath) as! StatTableViewCell
+            
+            let circleAngles = CircleAngles(valueOne: "2", valueTwo: "2", valueThree: "2")
+            
+            print("E1 "+String(circleAngles.get(.EndOne)))
+            print("E2 "+String(circleAngles.get(.EndTwo)))
+            print("E3 "+String(circleAngles.get(.EndThree)))
+
+
+            
+            tempCell.circleOne.animateFromAngle(0, toAngle: circleAngles.get(.EndOne) , duration: 5.0, completion: nil)
+            tempCell.circleOne.layer.zPosition = 2;
+            tempCell.circleTwo.animateFromAngle(0, toAngle: circleAngles.get(.EndTwo) , duration: 5.0, completion: nil)
+            tempCell.circleTwo.layer.zPosition = 1;
+            tempCell.circleThree.animateFromAngle(0, toAngle: circleAngles.get(.EndThree) , duration: 5.0, completion: nil)
+            tempCell.circleThree.layer.zPosition = 0;
+
+            
+            tempCell.oneLabel.text = "HI!"
+            tempCell.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
+            cell = tempCell
+            
+            drawn = true
+
+            
+        
         }
         else {
             let tempCell = tableView.dequeueReusableCellWithIdentifier("nameCell", forIndexPath: indexPath) as! NameTableViewCell

@@ -4,3 +4,5 @@
 use_frameworks!
 
 pod “ChameleonFramework/Swift”
+pod 'CorePlot', '~> 2.1'
+

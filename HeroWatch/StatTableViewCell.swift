@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CorePlot
+
 
 class StatTableViewCell: UITableViewCell {
 
