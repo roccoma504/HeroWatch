@@ -17,9 +17,14 @@ class StatTableViewCell: UITableViewCell {
     @IBOutlet weak var threeLabel: UILabel!
     @IBOutlet weak var fourLabel: UILabel!
     @IBOutlet weak var fiveLabel: UILabel!
+    @IBOutlet weak var sixLabel: UILabel!
+    @IBOutlet weak var sevenLabel: UILabel!
     @IBOutlet weak var circleOne: KDCircularProgress!
     @IBOutlet weak var circleTwo: KDCircularProgress!
     @IBOutlet weak var circleThree: KDCircularProgress!
+    @IBOutlet weak var circleFour: KDCircularProgress!
+    @IBOutlet weak var circleFive: KDCircularProgress!
+    @IBOutlet weak var circleSix: KDCircularProgress!
     
     override func awakeFromNib() {
         super.awakeFromNib()
