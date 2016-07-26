@@ -1,3 +1,0 @@
-COREPLOT_ALWAYS_SEARCH_USER_PATHS = YES
-COREPLOT_HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private/CorePlot/ios"
-COREPLOT_OTHER_LDFLAGS = -framework "Accelerate" -framework "Foundation" -framework "QuartzCore" -framework "UIKit"
