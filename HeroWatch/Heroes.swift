@@ -21,28 +21,50 @@ class Heroes: NSObject {
     }
     
     func get (value : Value) -> AnyObject {
+        var string : AnyObject!
         switch value {
         case .Eliminations:
-            return JSON["Eliminations"] as! String
+            string = JSON["Eliminations"] as! String
             
         case .Healing:
-            return JSON["HealingDone"] as! String
+            string = JSON["HealingDone"] as! String
             
         case .Damage:
-            return JSON["DamageDone"] as! String
+            string = JSON["DamageDone"] as! String
             
         case .Deaths:
-            return JSON["Deaths"] as! String
+            string = JSON["Deaths"] as! String
             
         case .Gold:
-            return JSON["Medals-Gold"] as! String
+            string = JSON["Medals-Gold"] as! String
             
         case .Silver:
-            return JSON["Medals-Silver"] as! String
+            string = JSON["Medals-Silver"] as! String
             
         case .Bronze:
-            return JSON["Medals-Bronze"] as! String
+            string = JSON["Medals-Bronze"] as! String
         }
+        return String(string).removeComma()
     }
     
 }
+
+extension String {
+    private func replace(string:String, replacement:String) -> String {
+        return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
+    
+    func removeWhitespace() -> String {
+        return self.replace(" ", replacement: "")
+    }
+    
+    func removeColon() -> String {
+        return self.replace(":", replacement: "")
+    }
+    
+    func removeComma() -> String {
+        return self.replace(",", replacement: "")
+    }
+    
+}
+

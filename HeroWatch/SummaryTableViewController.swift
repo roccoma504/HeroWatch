@@ -71,6 +71,8 @@ class SummaryTableViewController: UITableViewController {
             else {
                 self.quickHerosInfo = Heroes(JSON: json)
                 self.quickDataValid = true
+                self.updateTable()
+
 
             }
         }
@@ -82,8 +84,10 @@ class SummaryTableViewController: UITableViewController {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
             }
             else {
-                self.quickHerosInfo = Heroes(JSON: json)
+                self.competitiveHerosInfo = Heroes(JSON: json)
                 self.competitiveDataValid = true
+                self.updateTable()
+
             }
         }
     }
@@ -135,7 +139,7 @@ class SummaryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if allDataValid() {
-            return 2
+            return 5
         }
         else {
             return 1
@@ -146,7 +150,7 @@ class SummaryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell : UITableViewCell!
         
-        let colors = ColorSchemeOf(.Complementary, color: PRIMARY_COLOR, isFlatScheme: true)
+        let colors = ColorSchemeOf(.Triadic, color: PRIMARY_COLOR, isFlatScheme: true)
         
         if indexPath.row == 0 && allDataValid() {
             
@@ -156,8 +160,8 @@ class SummaryTableViewController: UITableViewController {
             tempCell.nameLabel.text = prefs.stringForKey("id")?.uppercaseString
             tempCell.regionLabel.text = prefs.stringForKey("region")?.uppercaseString
             tempCell.consoleLabel.text = prefs.stringForKey("console")?.uppercaseString
-            tempCell.quickLevel.text = "QP: " + (self.userInfo.get(.Rank) as! String)
-            tempCell.competLevel.text = "RP: " + String((self.userInfo.get(.Level) as! Int))
+            tempCell.quickLevel.text = "Quick: " + (self.userInfo.get(.Rank) as! String)
+            tempCell.competLevel.text = "Ranked: " + String((self.userInfo.get(.Level) as! Int))
             tempCell.competImage.image = rankImage
             tempCell.avatarImage.image = avatarImage
             tempCell.avatarImage.layer.cornerRadius = 16.0
@@ -175,25 +179,62 @@ class SummaryTableViewController: UITableViewController {
             let quickAngles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String)
             let competitiveAngles = CircleAngles(valueOne: self.userInfo.get(.CW) as! String, valueTwo: self.userInfo.get(.CL) as! String)
             
-            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 5.0, completion: nil)
+            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 4.0, completion: nil)
             tempCell.circleOne.layer.zPosition = 2
             tempCell.circleOne.setColors(colors[0])
-            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 10.0, completion: nil)
+            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 2.0, completion: nil)
             tempCell.circleTwo.layer.zPosition = 1
             tempCell.circleTwo.setColors(colors[1])
             tempCell.oneLabel.text = "Win:" + (self.userInfo.get(.QW) as! String)
             tempCell.oneLabel.textColor = colors[0]
             tempCell.twoLabel.text = "Lost:" + (self.userInfo.get(.QL) as! String)
             tempCell.twoLabel.textColor = colors[1]
-            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 5.0, completion: nil)
+            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 4.0, completion: nil)
             tempCell.circleFour.layer.zPosition = 2
             tempCell.circleFour.setColors(colors[0])
-            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 10.0, completion: nil)
+            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 2.0, completion: nil)
             tempCell.circleFive.layer.zPosition = 1
             tempCell.circleFive.setColors(colors[1])
             tempCell.threeLabel.text = "Win:" + (self.userInfo.get(.CW) as! String)
             tempCell.threeLabel.textColor = colors[0]
             tempCell.fourLabel.text = "Lost:" + (self.userInfo.get(.CL) as! String)
+            tempCell.fourLabel.textColor = colors[1]
+            
+            tempCell.fiveLabel.hidden = true
+            tempCell.sixLabel.hidden = true
+            tempCell.sevenLabel.hidden = true
+            cell = tempCell
+        }
+            
+        else if indexPath.row == 2 && allDataValid(){
+            
+            let tempCell = tableView.dequeueReusableCellWithIdentifier("statCell", forIndexPath: indexPath) as! StatTableViewCell
+            
+            let quickAngles = CircleAngles(valueOne: self.quickHerosInfo.get(.Eliminations) as! String, valueTwo: self.quickHerosInfo.get(.Deaths) as! String)
+
+            let competitiveAngles = CircleAngles(valueOne: self.competitiveHerosInfo.get(.Eliminations) as! String, valueTwo: self.competitiveHerosInfo.get(.Deaths) as! String)
+
+            
+            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 4.0, completion: nil)
+            tempCell.circleOne.layer.zPosition = 2
+            tempCell.circleOne.setColors(colors[0])
+            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 2.0, completion: nil)
+            tempCell.circleTwo.layer.zPosition = 1
+            tempCell.circleTwo.setColors(colors[1])
+            tempCell.oneLabel.text = "Kills:" + (self.quickHerosInfo.get(.Eliminations) as! String)
+            tempCell.oneLabel.textColor = colors[0]
+            tempCell.twoLabel.text = "Deaths:" + (self.quickHerosInfo.get(.Deaths) as! String)
+            tempCell.twoLabel.textColor = colors[1]
+            
+            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 4.0, completion: nil)
+            tempCell.circleFour.layer.zPosition = 2
+            tempCell.circleFour.setColors(colors[0])
+            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 2.0, completion: nil)
+            tempCell.circleFive.layer.zPosition = 1
+            tempCell.circleFive.setColors(colors[1])
+            tempCell.threeLabel.text = "Kills:" + (self.competitiveHerosInfo.get(.Eliminations) as! String)
+            tempCell.threeLabel.textColor = colors[0]
+            tempCell.fourLabel.text = "Deaths:" + (self.competitiveHerosInfo.get(.Deaths) as! String)
             tempCell.fourLabel.textColor = colors[1]
             
             
@@ -201,38 +242,95 @@ class SummaryTableViewController: UITableViewController {
             tempCell.sevenLabel.hidden = true
             tempCell.fiveLabel.hidden = true
             cell = tempCell
+            
         }
             
-        else if indexPath.row == 2 && allDataValid(){
+        else if indexPath.row == 3 && allDataValid(){
             
             let tempCell = tableView.dequeueReusableCellWithIdentifier("statCell", forIndexPath: indexPath) as! StatTableViewCell
-            let quickAngles = CircleAngles(valueOne: self.quickHerosInfo.get(.QW) as! String, valueTwo: self.quickHerosInfo.get(.QL) as! String)
-            let competitiveAngles = CircleAngles(valueOne: self.competitiveHerosInfo.get(.CW) as! String, valueTwo: self.competitiveHerosInfo.get(.CL) as! String)
             
-            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 5.0, completion: nil)
+            let quickAngles = CircleAngles(valueOne: self.quickHerosInfo.get(.Healing) as! String, valueTwo: self.quickHerosInfo.get(.Damage) as! String)
+            
+            let competitiveAngles = CircleAngles(valueOne: self.competitiveHerosInfo.get(.Healing) as! String, valueTwo: self.competitiveHerosInfo.get(.Damage) as! String)
+            
+            
+            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 4.0, completion: nil)
             tempCell.circleOne.layer.zPosition = 2
             tempCell.circleOne.setColors(colors[0])
-            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 10.0, completion: nil)
+            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 2.0, completion: nil)
             tempCell.circleTwo.layer.zPosition = 1
             tempCell.circleTwo.setColors(colors[1])
-            tempCell.oneLabel.text = "Win:" + (self.userInfo.get(.QW) as! String)
+            tempCell.oneLabel.text = "Healing:" + (self.quickHerosInfo.get(.Healing) as! String)
             tempCell.oneLabel.textColor = colors[0]
-            tempCell.twoLabel.text = "Lost:" + (self.userInfo.get(.QL) as! String)
+            tempCell.twoLabel.text = "Damage:" + (self.quickHerosInfo.get(.Damage) as! String)
             tempCell.twoLabel.textColor = colors[1]
-            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 5.0, completion: nil)
+            
+            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 4.0, completion: nil)
             tempCell.circleFour.layer.zPosition = 2
             tempCell.circleFour.setColors(colors[0])
-            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 10.0, completion: nil)
+            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 2.0, completion: nil)
             tempCell.circleFive.layer.zPosition = 1
             tempCell.circleFive.setColors(colors[1])
-            tempCell.threeLabel.text = "Win:" + (self.userInfo.get(.CW) as! String)
+            tempCell.threeLabel.text = "Healing:" + (self.competitiveHerosInfo.get(.Healing) as! String)
             tempCell.threeLabel.textColor = colors[0]
-            tempCell.fourLabel.text = "Lost:" + (self.userInfo.get(.CL) as! String)
+            tempCell.fourLabel.text = "Damage:" + (self.competitiveHerosInfo.get(.Damage) as! String)
             tempCell.fourLabel.textColor = colors[1]
             
             
             tempCell.sixLabel.hidden = true
             tempCell.sevenLabel.hidden = true
+            tempCell.fiveLabel.hidden = true
+            cell = tempCell
+            
+        }
+            
+        else if indexPath.row == 4 && allDataValid(){
+            
+            let tempCell = tableView.dequeueReusableCellWithIdentifier("statCell", forIndexPath: indexPath) as! StatTableViewCell
+            
+            let quickAngles = CircleAngles(valueOne: self.quickHerosInfo.get(.Gold) as! String, valueTwo: self.quickHerosInfo.get(.Silver) as! String, valueThree: self.quickHerosInfo.get(.Bronze) as! String)
+            
+            let competitiveAngles = CircleAngles(valueOne: self.competitiveHerosInfo.get(.Healing) as! String, valueTwo: self.competitiveHerosInfo.get(.Damage) as! String)
+            
+            
+            tempCell.circleOne.animateFromAngle(0, toAngle: quickAngles.get(.EndOne) , duration: 4.0, completion: nil)
+            tempCell.circleOne.layer.zPosition = 2
+            tempCell.circleOne.setColors(colors[0])
+            
+            tempCell.circleTwo.animateFromAngle(0, toAngle: quickAngles.get(.EndTwo) , duration: 2.0, completion: nil)
+            tempCell.circleTwo.layer.zPosition = 1
+            tempCell.circleTwo.setColors(colors[1])
+
+            tempCell.circleThree.animateFromAngle(0, toAngle: quickAngles.get(.EndThree) , duration: 2.0, completion: nil)
+            tempCell.circleThree.layer.zPosition = 2
+            tempCell.circleThree.setColors(colors[2])
+            
+            tempCell.oneLabel.text = "Gold:" + (self.quickHerosInfo.get(.Gold) as! String)
+            tempCell.oneLabel.textColor = colors[0]
+            tempCell.twoLabel.text = "Silver:" + (self.quickHerosInfo.get(.Silver) as! String)
+            tempCell.twoLabel.textColor = colors[1]
+            tempCell.sixLabel.text = "Bronze:" + (self.quickHerosInfo.get(.Bronze) as! String)
+            tempCell.sixLabel.textColor = colors[2]
+            
+            tempCell.circleFour.animateFromAngle(0, toAngle: competitiveAngles.get(.EndOne) , duration: 4.0, completion: nil)
+            tempCell.circleFour.layer.zPosition = 2
+            tempCell.circleFour.setColors(colors[0])
+            
+            tempCell.circleFive.animateFromAngle(0, toAngle: competitiveAngles.get(.EndTwo) , duration: 2.0, completion: nil)
+            tempCell.circleFive.layer.zPosition = 1
+            tempCell.circleFive.setColors(colors[1])
+            
+            tempCell.circleSix.animateFromAngle(0, toAngle: quickAngles.get(.EndThree) , duration: 2.0, completion: nil)
+            tempCell.circleSix.layer.zPosition = 2
+            tempCell.circleSix.setColors(colors[2])
+            
+            tempCell.threeLabel.text = "Gold:" + (self.competitiveHerosInfo.get(.Gold) as! String)
+            tempCell.threeLabel.textColor = colors[0]
+            tempCell.fourLabel.text = "Silver:" + (self.competitiveHerosInfo.get(.Silver) as! String)
+            tempCell.fourLabel.textColor = colors[1]
+            tempCell.sevenLabel.text = "Bronze:" + (self.quickHerosInfo.get(.Bronze) as! String)
+            tempCell.sevenLabel.textColor = colors[2]
+            
             tempCell.fiveLabel.hidden = true
             cell = tempCell
             
