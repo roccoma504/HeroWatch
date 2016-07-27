@@ -19,6 +19,13 @@
 		393D9EB21D3F028C005C8CC2 /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EB11D3F028C005C8CC2 /* UIUtilities.swift */; };
 		393D9EB41D3F1998005C8CC2 /* URLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EB31D3F1998005C8CC2 /* URLUtilities.swift */; };
 		393D9EB81D3F1C3E005C8CC2 /* JSONUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EB71D3F1C3E005C8CC2 /* JSONUtilities.swift */; };
+		393D9EBC1D4301C2005C8CC2 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EBB1D4301C2005C8CC2 /* SummaryTableViewController.swift */; };
+		393D9EBF1D430832005C8CC2 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EBD1D430832005C8CC2 /* NameTableViewCell.swift */; };
+		393D9EC01D430832005C8CC2 /* StatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EBE1D430832005C8CC2 /* StatTableViewCell.swift */; };
+		393D9EC21D430DA5005C8CC2 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC11D430DA5005C8CC2 /* KDCircularProgress.swift */; };
+		393D9EC41D46D682005C8CC2 /* CircleAngles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC31D46D682005C8CC2 /* CircleAngles.swift */; };
+		393D9EC61D480013005C8CC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC51D480013005C8CC2 /* User.swift */; };
+		393D9EC81D481E66005C8CC2 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC71D481E66005C8CC2 /* Heroes.swift */; };
 		436913C21367AD6476A92013 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C421D84A71F3E5B678BBC72D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,13 @@
 		393D9EB11D3F028C005C8CC2 /* UIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
 		393D9EB31D3F1998005C8CC2 /* URLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilities.swift; sourceTree = "<group>"; };
 		393D9EB71D3F1C3E005C8CC2 /* JSONUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilities.swift; sourceTree = "<group>"; };
+		393D9EBB1D4301C2005C8CC2 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		393D9EBD1D430832005C8CC2 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		393D9EBE1D430832005C8CC2 /* StatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatTableViewCell.swift; sourceTree = "<group>"; };
+		393D9EC11D430DA5005C8CC2 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		393D9EC31D46D682005C8CC2 /* CircleAngles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleAngles.swift; sourceTree = "<group>"; };
+		393D9EC51D480013005C8CC2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		393D9EC71D481E66005C8CC2 /* Heroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
 		82F09A6ADC985E48E5C84A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C421D84A71F3E5B678BBC72D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69DF52D1C68681D2DF1BCA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,12 +113,13 @@
 				393D9E971D3EEC76005C8CC2 /* Info.plist */,
 				393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */,
 				393D9EAD1D3EF24D005C8CC2 /* Constants.swift */,
-				393D9EB51D3F1B7D005C8CC2 /* Utilities */,
-				393D9EB61D3F1B86005C8CC2 /* View Controller */,
 				393D9E921D3EEC76005C8CC2 /* Assets.xcassets */,
 				393D9E8F1D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld */,
 				393D9E941D3EEC76005C8CC2 /* LaunchScreen.storyboard */,
 				393D9E8C1D3EEC76005C8CC2 /* Main.storyboard */,
+				393D9EC91D481E6B005C8CC2 /* Modal */,
+				393D9EB51D3F1B7D005C8CC2 /* Utilities */,
+				393D9EB61D3F1B86005C8CC2 /* View Controller */,
 			);
 			path = HeroWatch;
 			sourceTree = "<group>";
@@ -121,9 +136,11 @@
 		393D9EB51D3F1B7D005C8CC2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				393D9EB31D3F1998005C8CC2 /* URLUtilities.swift */,
-				393D9EB11D3F028C005C8CC2 /* UIUtilities.swift */,
+				393D9EC31D46D682005C8CC2 /* CircleAngles.swift */,
 				393D9EB71D3F1C3E005C8CC2 /* JSONUtilities.swift */,
+				393D9EC11D430DA5005C8CC2 /* KDCircularProgress.swift */,
+				393D9EB11D3F028C005C8CC2 /* UIUtilities.swift */,
+				393D9EB31D3F1998005C8CC2 /* URLUtilities.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -131,10 +148,22 @@
 		393D9EB61D3F1B86005C8CC2 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				393D9EBD1D430832005C8CC2 /* NameTableViewCell.swift */,
+				393D9EBE1D430832005C8CC2 /* StatTableViewCell.swift */,
 				393D9EAF1D3EFAAB005C8CC2 /* UserViewController.swift */,
 				393D9EAB1D3EF1D7005C8CC2 /* WelcomeViewController.swift */,
+				393D9EBB1D4301C2005C8CC2 /* SummaryTableViewController.swift */,
 			);
 			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		393D9EC91D481E6B005C8CC2 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				393D9EC51D480013005C8CC2 /* User.swift */,
+				393D9EC71D481E66005C8CC2 /* Heroes.swift */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		A1078BB1D34A321DCEF23A6E /* Frameworks */ = {
@@ -308,13 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393D9EC21D430DA5005C8CC2 /* KDCircularProgress.swift in Sources */,
+				393D9EC01D430832005C8CC2 /* StatTableViewCell.swift in Sources */,
 				393D9EB41D3F1998005C8CC2 /* URLUtilities.swift in Sources */,
+				393D9EC81D481E66005C8CC2 /* Heroes.swift in Sources */,
 				393D9EB21D3F028C005C8CC2 /* UIUtilities.swift in Sources */,
 				393D9EAE1D3EF24D005C8CC2 /* Constants.swift in Sources */,
 				393D9EB01D3EFAAB005C8CC2 /* UserViewController.swift in Sources */,
+				393D9EC61D480013005C8CC2 /* User.swift in Sources */,
+				393D9EBF1D430832005C8CC2 /* NameTableViewCell.swift in Sources */,
 				393D9EB81D3F1C3E005C8CC2 /* JSONUtilities.swift in Sources */,
 				393D9EAC1D3EF1D7005C8CC2 /* WelcomeViewController.swift in Sources */,
+				393D9EC41D46D682005C8CC2 /* CircleAngles.swift in Sources */,
 				393D9E911D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld in Sources */,
+				393D9EBC1D4301C2005C8CC2 /* SummaryTableViewController.swift in Sources */,
 				393D9E891D3EEC76005C8CC2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

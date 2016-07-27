@@ -42,5 +42,5 @@ class UIUtilities {
     static func hideView (view : UIView, hide : Bool) {
         view.hidden = hide
     }
-    
+        
 }
