@@ -23,7 +23,6 @@
 		393D9EC41D46D682005C8CC2 /* CircleAngles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC31D46D682005C8CC2 /* CircleAngles.swift */; };
 		393D9EC61D480013005C8CC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC51D480013005C8CC2 /* User.swift */; };
 		393D9EC81D481E66005C8CC2 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9EC71D481E66005C8CC2 /* Heroes.swift */; };
-		393D9ECB1D483B89005C8CC2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9ECA1D483B89005C8CC2 /* ContainerViewController.swift */; };
 		393D9ECD1D483BCA005C8CC2 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */; };
 		393D9ECF1D484651005C8CC2 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9ECE1D484651005C8CC2 /* GraphViewController.swift */; };
 		436913C21367AD6476A92013 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C421D84A71F3E5B678BBC72D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -60,7 +59,6 @@
 		393D9EC31D46D682005C8CC2 /* CircleAngles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleAngles.swift; sourceTree = "<group>"; };
 		393D9EC51D480013005C8CC2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		393D9EC71D481E66005C8CC2 /* Heroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
-		393D9ECA1D483B89005C8CC2 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		393D9ECE1D484651005C8CC2 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		82F09A6ADC985E48E5C84A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				393D9E8C1D3EEC76005C8CC2 /* Main.storyboard */,
 				393D9ECE1D484651005C8CC2 /* GraphViewController.swift */,
 				393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */,
-				393D9ECA1D483B89005C8CC2 /* ContainerViewController.swift */,
 				393D9EC91D481E6B005C8CC2 /* Modal */,
 				393D9EB51D3F1B7D005C8CC2 /* Utilities */,
 				393D9EB61D3F1B86005C8CC2 /* View Controller */,
@@ -347,7 +344,6 @@
 				393D9ECF1D484651005C8CC2 /* GraphViewController.swift in Sources */,
 				393D9ECD1D483BCA005C8CC2 /* UserInfoViewController.swift in Sources */,
 				393D9EB81D3F1C3E005C8CC2 /* JSONUtilities.swift in Sources */,
-				393D9ECB1D483B89005C8CC2 /* ContainerViewController.swift in Sources */,
 				393D9EAC1D3EF1D7005C8CC2 /* WelcomeViewController.swift in Sources */,
 				393D9EC41D46D682005C8CC2 /* CircleAngles.swift in Sources */,
 				393D9E911D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld in Sources */,

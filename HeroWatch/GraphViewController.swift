@@ -11,22 +11,22 @@ import UIKit
 
 class GraphViewController: UIViewController {
     
+    // Defines our circles for data viewing.
     @IBOutlet weak var circleOne: KDCircularProgress!
     @IBOutlet weak var circleTwo: KDCircularProgress!
     @IBOutlet weak var circleThree: KDCircularProgress!
-    
-    
-    private var userInfo : User!
-    
-    private let prefs = NSUserDefaults.standardUserDefaults()
-
-
+    @IBOutlet weak var oneLabel: UILabel!
+    @IBOutlet weak var twoLabel: UILabel!
+    @IBOutlet weak var threeLabel: UILabel!
     
     private enum GraphKind : Int {
         case Wins = 0
         case Kills
     }
+    
+    private let prefs = NSUserDefaults.standardUserDefaults()
 
+    private var userInfo : User!
     
     // create swipe gesture
     let swipeGestureLeft = UISwipeGestureRecognizer()
@@ -36,11 +36,11 @@ class GraphViewController: UIViewController {
     
     
     // outlet - page control
-    @IBOutlet var myPageControl: UIPageControl!
+    @IBOutlet var pageControl: UIPageControl!
     
 
     private func displaycircle (circle : KDCircularProgress, toAngle : Int, color : UIColor, zPos: CGFloat) {
-        circle.animateFromAngle(0, toAngle: toAngle , duration: 4.0, completion: nil)
+        circle.animateFromAngle(0, toAngle: toAngle , duration: 2.0, completion: nil)
         circle.layer.zPosition = zPos
         circle.setColors(color)
     }
@@ -62,11 +62,45 @@ class GraphViewController: UIViewController {
     
     private func update(kind : GraphKind) {
         
-        let quickAngles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String)
-        let colors = ColorSchemeOf(.Triadic, color: PRIMARY_COLOR, isFlatScheme: true)
+        threeLabel.hidden = true
+        circleThree.hidden = true
+
+        var angles : CircleAngles!
         
-        displaycircle(circleOne, toAngle: quickAngles.get(.EndOne), color: colors[0], zPos: 2)
-        displaycircle(circleTwo, toAngle: quickAngles.get(.EndTwo), color: colors[1], zPos: 1)
+        //let quickAngles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String)
+        //
+        
+        if kind == .Wins {
+            
+             angles = CircleAngles(valueOne: "100000", valueTwo: "244444",labelOne: "one",labelTwo: "two")
+        }
+        else {
+             angles = CircleAngles(valueOne: "1000", valueTwo: "2000",valueThree: "300",labelOne: "one",labelTwo: "two",labelThree: "three")
+        }
+
+        
+        let colors = ColorSchemeOf(.Complementary, color: PRIMARY_COLOR, isFlatScheme: true)
+        
+        view.backgroundColor = colors[0]
+        displaycircle(circleOne, toAngle: angles.get(.EndOne), color: colors[1], zPos: 2)
+        displaycircle(circleTwo, toAngle: angles.get(.EndTwo), color: colors[2], zPos: 1)
+        pageControl.tintColor = colors[4]
+        oneLabel.text = angles.get(.LabelOne).uppercaseString
+        oneLabel.textColor = colors[1]
+        twoLabel.text = angles.get(.LabelTwo).uppercaseString
+        twoLabel.textColor = colors[2]
+        
+        if kind != .Wins {
+            displaycircle(circleThree, toAngle: angles.get(.EndThree), color: colors[3], zPos: 0)
+            threeLabel.text = angles.get(.LabelThree).uppercaseString
+            threeLabel.textColor = colors[3]
+            threeLabel.hidden = false
+            circleThree.hidden = false
+
+        }
+        
+
+
     }
 
     
@@ -74,6 +108,11 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.update(.Wins)
+
+        
         //getUserData()
         // Do any additional setup after loading the view, typically from a nib.
 
@@ -102,18 +141,18 @@ class GraphViewController: UIViewController {
     
     // increase page number on swift left
     func handleSwipeLeft(gesture: UISwipeGestureRecognizer){
-        if self.myPageControl.currentPage < 9 {
-            self.myPageControl.currentPage += 1
-            update(GraphKind(rawValue: self.myPageControl.currentPage)!)
+        if self.pageControl.currentPage < 9 {
+            self.pageControl.currentPage += 1
+            update(GraphKind(rawValue: self.pageControl.currentPage)!)
         }
     }
     
     // reduce page number on swift right
     func handleSwipeRight(gesture: UISwipeGestureRecognizer){
         
-        if self.myPageControl.currentPage != 0 {
-            self.myPageControl.currentPage -= 1
-            update(GraphKind(rawValue: self.myPageControl.currentPage)!)
+        if self.pageControl.currentPage != 0 {
+            self.pageControl.currentPage -= 1
+            update(GraphKind(rawValue: self.pageControl.currentPage)!)
         }
     }
 

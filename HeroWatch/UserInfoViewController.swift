@@ -131,7 +131,7 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         UIUtilities.adjustAlpha(self.view, alpha: 0.5)
         self.view.backgroundColor = FlatGray()
-        getUserData()
+        //getUserData()
     }
 
     override func didReceiveMemoryWarning() {
