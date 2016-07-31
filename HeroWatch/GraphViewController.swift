@@ -64,20 +64,8 @@ class GraphViewController: UIViewController {
         
         threeLabel.hidden = true
         circleThree.hidden = true
-
-        var angles : CircleAngles!
         
-        //let quickAngles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String)
-        //
-        
-        if kind == .Wins {
-            
-             angles = CircleAngles(valueOne: "100000", valueTwo: "244444",labelOne: "one",labelTwo: "two")
-        }
-        else {
-             angles = CircleAngles(valueOne: "1000", valueTwo: "2000",valueThree: "300",labelOne: "one",labelTwo: "two",labelThree: "three")
-        }
-
+        let angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "", labelTwo: "")
         
         let colors = ColorSchemeOf(.Complementary, color: PRIMARY_COLOR, isFlatScheme: true)
         
@@ -109,10 +97,7 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.update(.Wins)
-
-        
+                
         //getUserData()
         // Do any additional setup after loading the view, typically from a nib.
 

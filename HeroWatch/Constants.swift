@@ -113,6 +113,12 @@ extension String {
                 newString = newString.insert(comma, ind: self.characters.count - 3)
                 newString = newString.insert(comma, ind: self.characters.count - 6)
             }
+            else if stringLength >= 7{
+                newString = newString.insert(comma, ind: self.characters.count - 3)
+                newString = newString.insert(comma, ind: self.characters.count - 6)
+                newString = newString.insert(comma, ind: self.characters.count - 9)
+
+            }
         }
         magnitude()
         return newString

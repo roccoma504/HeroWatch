@@ -52,7 +52,7 @@ extension String {
     }
 }
 
-var test : String = "100000=00"
+var test : String = "10000000"
 
 let yo = test.addComma()
 
