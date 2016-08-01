@@ -15,12 +15,9 @@ class FriendTableViewController: UITableViewController {
     @objc private func reload() {
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("friends") as? NSData {
             friends = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Friend]
-            print(friends)
         }
         tableView.reloadData()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +69,19 @@ class FriendTableViewController: UITableViewController {
 
         }
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("selectCell", sender: self)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "selectCell") {
+            let viewController : CompareTableViewController = segue.destinationViewController as! CompareTableViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            viewController.receviedPlayer = self.friends[indexPath!.row]
+        }
+    }
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == friends.count - 1 {
