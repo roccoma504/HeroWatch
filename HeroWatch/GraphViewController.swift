@@ -25,6 +25,8 @@ class GraphViewController: UIViewController {
     }
     
     private let prefs = NSUserDefaults.standardUserDefaults()
+    
+    var colors = [UIColor]()
 
     private var userInfo : User!
     
@@ -34,13 +36,11 @@ class GraphViewController: UIViewController {
     
     private var currentGraphKind : GraphKind = .Wins
     
-    
     // outlet - page control
     @IBOutlet var pageControl: UIPageControl!
     
-
     private func displaycircle (circle : KDCircularProgress, toAngle : Int, color : UIColor, zPos: CGFloat) {
-        circle.animateFromAngle(0, toAngle: toAngle , duration: 2.0, completion: nil)
+        circle.animateFromAngle(0, toAngle: toAngle , duration: 2.5, completion: nil)
         circle.layer.zPosition = zPos
         circle.setColors(color)
     }
@@ -55,7 +55,7 @@ class GraphViewController: UIViewController {
             else {
                 self.userInfo = User(JSON: json)
                 self.update(.Wins)
-
+                
             }
         }
     }
@@ -65,10 +65,20 @@ class GraphViewController: UIViewController {
         threeLabel.hidden = true
         circleThree.hidden = true
         
-        let angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "", labelTwo: "")
+        let angles : CircleAngles!
         
-        let colors = ColorSchemeOf(.Complementary, color: PRIMARY_COLOR, isFlatScheme: true)
+        //let angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "", labelTwo: "")
         
+        
+        if kind == .Wins {
+            
+            angles = CircleAngles(valueOne: "180", valueTwo: "180", labelOne: "One", labelTwo: "Two")
+            
+        }
+        else {
+            angles = CircleAngles(valueOne: "120", valueTwo: "120", valueThree: "120", labelOne: "One", labelTwo: "Two", labelThree: "Three")
+            
+        }
         view.backgroundColor = colors[0]
         displaycircle(circleOne, toAngle: angles.get(.EndOne), color: colors[1], zPos: 2)
         displaycircle(circleTwo, toAngle: angles.get(.EndTwo), color: colors[2], zPos: 1)
@@ -84,23 +94,23 @@ class GraphViewController: UIViewController {
             threeLabel.textColor = colors[3]
             threeLabel.hidden = false
             circleThree.hidden = false
-
         }
-        
-
-
     }
-
+    
     
     // MARK: - view functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                
+        
+        colors = ColorSchemeOf(.Analogous, color: SECONDARY_COLOR, isFlatScheme: true)
+
+        
         //getUserData()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
+        update(.Wins)
         
         // set gesture direction
         swipeGestureLeft.direction = UISwipeGestureRecognizerDirection.Left
@@ -114,7 +124,6 @@ class GraphViewController: UIViewController {
         view.addGestureRecognizer(swipeGestureLeft)
         view.addGestureRecognizer(swipeGestureRight)
         
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -140,6 +149,6 @@ class GraphViewController: UIViewController {
             update(GraphKind(rawValue: self.pageControl.currentPage)!)
         }
     }
-
-
+    
+    
 }

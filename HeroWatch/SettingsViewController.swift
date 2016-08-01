@@ -27,7 +27,6 @@ class SettingsViewController: UIViewController {
         view.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
         
         instructionLabel.textColor = SECONDARY_COLOR
-        
         checkButton.backgroundColor = PRIMARY_COLOR
         checkButton.layer.cornerRadius = 5
         checkButton.layer.borderWidth = 1
@@ -36,12 +35,6 @@ class SettingsViewController: UIViewController {
         idTextField.text = prefs.stringForKey("id")
         platformSelector.selectedSegmentIndex = CONSOLE_ARRAY.indexOf(self.prefs.stringForKey("console")!)!
         regionSelector.selectedSegmentIndex = REGION_ARRAY.indexOf(self.prefs.stringForKey("region")!)!
-        
-        
-        
-        print(REGION_ARRAY.indexOf(prefs.stringForKey("region")!))
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -88,7 +81,6 @@ class SettingsViewController: UIViewController {
                 }
                 
             }
-            
             print (json)
         }
     }
