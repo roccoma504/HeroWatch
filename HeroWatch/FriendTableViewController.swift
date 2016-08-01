@@ -26,7 +26,6 @@ class FriendTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(add))
         self.refreshControl?.addTarget(self, action: #selector(reload), forControlEvents: UIControlEvents.ValueChanged)
-
         reload()
     }
     
@@ -58,6 +57,20 @@ class FriendTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            friends.removeAtIndex(indexPath.row)
+            let data = NSKeyedArchiver.archivedDataWithRootObject(friends)
+            NSUserDefaults.standardUserDefaults().setObject(data, forKey: "friends")
+            reload()
+
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
