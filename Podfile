@@ -6,3 +6,12 @@ before_install:
   - gem install cocoapods -v '0.32.1'
   
   pod 'ChameleonFramework'
+
+
+target 'HeroWatch' do
+  pod 'ChameleonFramework'
+end
+
+target 'HeroWatchTests' do
+  pod 'ChameleonFramework'
+end
