@@ -1,14 +1,7 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, ‘9.0’
 
-  
-  pod 'ChameleonFramework'
+use_frameworks!
 
+pod “ChameleonFramework/Swift”
 
-target 'HeroWatch' do
-  pod 'ChameleonFramework'
-end
-
-target 'HeroWatchTests' do
-  pod 'ChameleonFramework'
-end
