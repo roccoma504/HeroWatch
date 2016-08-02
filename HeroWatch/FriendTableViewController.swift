@@ -12,16 +12,11 @@ class FriendTableViewController: UITableViewController {
     
     private var friends = [Friend]()
     
-    @objc private func reload() {
-        if let data = NSUserDefaults.standardUserDefaults().objectForKey("friends") as? NSData {
-            friends = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Friend]
-        }
-        tableView.reloadData()
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(add))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
         self.refreshControl?.addTarget(self, action: #selector(reload), forControlEvents: UIControlEvents.ValueChanged)
         reload()
     }
@@ -30,8 +25,15 @@ class FriendTableViewController: UITableViewController {
         reload()
     }
     
-    @objc private func add () {
+     func add () {
         performSegueWithIdentifier("addFriend", sender: self)
+    }
+    
+    func reload() {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("friends") as? NSData {
+            friends = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Friend]
+        }
+        tableView.reloadData()
     }
     
     
