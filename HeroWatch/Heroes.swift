@@ -49,22 +49,5 @@ class Heroes: NSObject {
     
 }
 
-extension String {
-    private func replace(string:String, replacement:String) -> String {
-        return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
-    }
-    
-    func removeWhitespace() -> String {
-        return self.replace(" ", replacement: "")
-    }
-    
-    func removeColon() -> String {
-        return self.replace(":", replacement: "")
-    }
-    
-    func removeComma() -> String {
-        return self.replace(",", replacement: "")
-    }
-    
-}
+
 
