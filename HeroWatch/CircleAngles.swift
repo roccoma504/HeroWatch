@@ -10,24 +10,40 @@ import UIKit
 
 class CircleAngles: NSObject {
     
-    enum CircleAngles {
-        case EndOne, EndTwo, EndThree
+    enum Param {
+        case EndOne, EndTwo, EndThree, LabelOne, LabelTwo, LabelThree
     }
     
     private var valueOne, valueTwo, valueThree : Float!
+    private var labelOne, labelTwo : String!
     private var angleOneEnd, angleTwoEnd : Int!
     private var angleThreeEnd : Int = 0
-
+    private var labelThree : String = ""
+    
+    
     
     init (valueOne : String,
           valueTwo : String,
-          valueThree : String = "0") {
+          valueThree : String = "0",
+          labelOne : String,
+          labelTwo : String,
+          labelThree : String = "") {
         super.init()
         
         self.valueOne = Float(valueOne)
         self.valueTwo = Float(valueTwo)
         self.valueThree = Float(valueThree)
-        calculateAngles(Float(valueOne)!, valueTwo: Float(valueTwo)!, valueThree: Float(valueThree)!)
+        self.labelOne = labelOne
+        self.labelTwo = labelTwo
+        self.labelThree = labelThree
+        calculate(Float(valueOne)!, two: Float(valueTwo)!, three: Float(valueThree)!)
+        calculate(labelOne, two:labelTwo, three: labelThree)
+
+        
+    }
+    
+    private func formatedString(title : String, value : Float) -> String {
+    return title + " " + String(Int(value)).addComma()
     }
     
     private func newAngle(count : Float, max : Float) -> Int {
@@ -39,7 +55,7 @@ class CircleAngles: NSObject {
         return total
     }
     
-    private func calculateAngles(valueOne : Float, valueTwo: Float, valueThree : Float) {
+    private func calculate(one : Float, two: Float, three : Float) {
         
         let total = valueOne + valueTwo + valueThree
         var sortedArray : Array <Float> = []
@@ -55,14 +71,37 @@ class CircleAngles: NSObject {
         
     }
     
-    func get (angle : CircleAngles) -> Int {
-        switch angle {
+    private func calculate (one : String, two: String, three : String) {
+        
+        labelOne = formatedString(one, value: valueOne)
+        labelTwo = formatedString(two, value: valueTwo)
+        labelThree = formatedString(three, value: valueThree)
+
+    }
+    
+    func get (value : Param) -> Int {
+        switch value {
         case .EndOne:
             return angleOneEnd
         case .EndTwo:
             return angleTwoEnd
         case .EndThree:
             return angleThreeEnd
+        default:
+            return -1
+        }
+    }
+    
+    func get (value : Param) -> String {
+        switch value {
+        case .LabelOne:
+            return labelOne
+        case .LabelTwo:
+            return labelTwo
+        case .LabelThree:
+            return labelThree
+        default :
+            return "error"
         }
     }
     
