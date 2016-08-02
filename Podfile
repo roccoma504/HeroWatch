@@ -5,4 +5,4 @@
 before_install:
   - gem install cocoapods -v '0.32.1'
   
-  pod 'ChameleonFramework ~> 2.1'
+  pod 'ChameleonFramework'
