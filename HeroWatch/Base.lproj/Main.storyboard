@@ -671,6 +671,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1an-ss-XmT">
+<<<<<<< HEAD
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -678,6 +679,15 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-Ho-6Kq">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+=======
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-Ho-6Kq">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+>>>>>>> origin/master
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="dUZ-oM-sR9">
                                                     <variation key="widthClass=compact" constant="150"/>
@@ -728,6 +738,7 @@
                                         </mask>
                                         <mask key="constraints">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <exclude reference="8w2-rs-Fap"/>
                                             <exclude reference="LNE-XA-qPG"/>
                                             <exclude reference="ukO-Px-XrC"/>
@@ -754,6 +765,8 @@
                                             <exclude reference="9Fz-R7-djs"/>
                                             <exclude reference="Vny-cp-0zJ"/>
 =======
+=======
+>>>>>>> origin/master
                                             <exclude reference="aas-90-nUN"/>
                                             <exclude reference="hc8-IO-txc"/>
                                             <exclude reference="y9E-7u-bIW"/>
@@ -762,6 +775,9 @@
                                             <exclude reference="pPJ-rS-iha"/>
                                             <exclude reference="6To-Us-5aM"/>
                                             <exclude reference="PsC-1G-A3n"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                                         </mask>
                                     </variation>
@@ -772,6 +788,7 @@
                                             <include reference="PAy-cb-1u6"/>
                                         </mask>
                                         <mask key="constraints">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                             <include reference="8w2-rs-Fap"/>
                                             <include reference="LNE-XA-qPG"/>
@@ -799,6 +816,8 @@
                                             <include reference="9Fz-R7-djs"/>
                                             <include reference="Vny-cp-0zJ"/>
 =======
+=======
+>>>>>>> origin/master
                                             <include reference="aas-90-nUN"/>
                                             <include reference="hc8-IO-txc"/>
                                             <include reference="y9E-7u-bIW"/>
@@ -807,6 +826,9 @@
                                             <include reference="pPJ-rS-iha"/>
                                             <include reference="6To-Us-5aM"/>
                                             <include reference="PsC-1G-A3n"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                                         </mask>
                                     </variation>
@@ -908,6 +930,7 @@
                                         </mask>
                                         <mask key="constraints">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <exclude reference="B89-4L-2V2"/>
                                             <exclude reference="NNg-BZ-eot"/>
                                             <exclude reference="ZqP-O5-bak"/>
@@ -962,6 +985,8 @@
                                             <exclude reference="YcG-n8-Ah1"/>
                                             <exclude reference="ruP-mm-ZeO"/>
 =======
+=======
+>>>>>>> origin/master
                                             <exclude reference="1iY-6m-Ood"/>
                                             <exclude reference="Dsk-9b-rO3"/>
                                             <exclude reference="JEy-Ev-jfq"/>
@@ -978,6 +1003,9 @@
                                             <exclude reference="p5N-jG-Nxy"/>
                                             <exclude reference="url-lx-gNY"/>
                                             <exclude reference="ywD-uN-52h"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                                         </mask>
                                     </variation>
@@ -990,6 +1018,7 @@
                                             <include reference="3lg-3u-XxO"/>
                                         </mask>
                                         <mask key="constraints">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                             <include reference="B89-4L-2V2"/>
                                             <include reference="NNg-BZ-eot"/>
@@ -1045,6 +1074,8 @@
                                             <include reference="YcG-n8-Ah1"/>
                                             <include reference="ruP-mm-ZeO"/>
 =======
+=======
+>>>>>>> origin/master
                                             <include reference="1iY-6m-Ood"/>
                                             <include reference="Dsk-9b-rO3"/>
                                             <include reference="JEy-Ev-jfq"/>
@@ -1061,6 +1092,9 @@
                                             <include reference="p5N-jG-Nxy"/>
                                             <include reference="url-lx-gNY"/>
                                             <include reference="ywD-uN-52h"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                                         </mask>
                                     </variation>
