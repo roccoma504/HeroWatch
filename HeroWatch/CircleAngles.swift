@@ -11,7 +11,7 @@ import UIKit
 class CircleAngles: NSObject {
     
     enum Param {
-        case EndOne, EndTwo, EndThree, LabelOne, LabelTwo, LabelThree
+        case EndOne, EndTwo, EndThree, LabelOne, LabelTwo, LabelThree, Total
     }
     
     private var valueOne, valueTwo, valueThree : Float!
@@ -19,6 +19,7 @@ class CircleAngles: NSObject {
     private var angleOneEnd, angleTwoEnd : Int!
     private var angleThreeEnd : Int = 0
     private var labelThree : String = ""
+    private var total : Float = 0.0
     
     
     
@@ -42,8 +43,8 @@ class CircleAngles: NSObject {
         
     }
     
-    private func formatedString(title : String, value : Float) -> String {
-    return title + " " + String(Int(value)).addComma()
+    private func formatedString(title : String, value : Float, percentage: Float) -> String {
+    return title + " " + String(Int(value)).addComma() + "/" + String(Int(percentage)) + "%"
     }
     
     private func newAngle(count : Float, max : Float) -> Int {
@@ -57,7 +58,7 @@ class CircleAngles: NSObject {
     
     private func calculate(one : Float, two: Float, three : Float) {
         
-        let total = valueOne + valueTwo + valueThree
+        total = valueOne + valueTwo + valueThree
         var sortedArray : Array <Float> = []
 
         sortedArray.append(valueOne)
@@ -73,9 +74,9 @@ class CircleAngles: NSObject {
     
     private func calculate (one : String, two: String, three : String) {
         
-        labelOne = formatedString(one, value: valueOne)
-        labelTwo = formatedString(two, value: valueTwo)
-        labelThree = formatedString(three, value: valueThree)
+        labelOne = formatedString(one, value: valueOne, percentage: 100 * valueOne/total)
+        labelTwo = formatedString(two, value: valueTwo, percentage: 100 * valueTwo/total)
+        labelThree = formatedString(three, value: valueThree, percentage: 100 * valueThree/total)
 
     }
     
@@ -87,6 +88,8 @@ class CircleAngles: NSObject {
             return angleTwoEnd
         case .EndThree:
             return angleThreeEnd
+        case .Total:
+            return Int(total)
         default:
             return -1
         }

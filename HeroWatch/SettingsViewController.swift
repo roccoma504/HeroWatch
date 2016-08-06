@@ -77,7 +77,6 @@ class SettingsViewController: UIViewController {
                     self.prefs.setObject(json["level"], forKey: "level")
                     self.prefs.setObject(json["data"]!["competitive"]!!["rank"] as! String, forKey: "rank")
                     self.prefs.setObject(json["data"]!["avatar"] as! String, forKey: "avatar")
-                    self.performSegueWithIdentifier("setUpComplete", sender: self)
                 }
                 
             }

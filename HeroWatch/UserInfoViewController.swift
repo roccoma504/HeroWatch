@@ -49,6 +49,7 @@ class UserInfoViewController: UIViewController {
             view.image = image
             view.layer.cornerRadius = view.frame.size.width / 2
             view.clipsToBounds = true
+            view.tintColor = FlatPurple()
         })
     }
     
@@ -69,12 +70,13 @@ class UserInfoViewController: UIViewController {
      */
     private func update() {
         if avatarImageValid && rankedImageValid {
-            UIUtilities.adjustAlpha(self.view, alpha: 1.0)
-            self.update(battleTagLabel, text: prefs.stringForKey("id")!)
-            self.update(regionLabel, text: prefs.stringForKey("region")!)
-            self.update(consoleLabel, text: prefs.stringForKey("console")!)
-            self.update(quickLabel, text: String(userInfo.get(.Level) as! Int), prefix: "QP: ")
-            self.update(rankedLabel, text: userInfo.get(.Rank) as! String, prefix: "RP: ")
+            update(battleTagLabel, text: prefs.stringForKey("id")!)
+            update(regionLabel, text: prefs.stringForKey("region")!)
+            update(consoleLabel, text: prefs.stringForKey("console")!)
+            update(quickLabel, text: String(userInfo.get(.Level) as! Int), prefix: "Quick Play: ")
+            update(rankedLabel, text: userInfo.get(.Rank) as! String, prefix: "Ranked Play: ")
+            navigationItem.title = prefs.stringForKey("id")!
+            self.parentViewController?.title = "hi"
         }
     }
     
@@ -129,9 +131,11 @@ class UserInfoViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIUtilities.adjustAlpha(self.view, alpha: 0.5)
-        self.view.backgroundColor = FlatGray()
-        //getUserData()
+        view.backgroundColor = FlatWhite()
+        
+        
+
+        getUserData()
     }
 
     override func didReceiveMemoryWarning() {

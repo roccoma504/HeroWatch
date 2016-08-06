@@ -1,5 +1,5 @@
 //
-//  Heroes.swift
+//  AllHeroes.swift
 //
 //
 //  Created by Matthew Rocco on 7/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Heroes: NSObject {
+class AllHeroes: NSObject {
     
     enum Value {
         case Eliminations, Healing, Damage, Deaths, Gold, Silver, Bronze
