@@ -1153,24 +1153,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-0W-XJa" customClass="KDCircularProgress" customModule="HeroWatch" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGZ-54-YBe" customClass="KDCircularProgress" customModule="HeroWatch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor3">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor2">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <integer key="value" value="360"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowAmount">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressInsideFillColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientRotateSpeed">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressThickness">
                                         <real key="value" value="0.40000000000000002"/>
@@ -1178,19 +1177,20 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
                                         <real key="value" value="0.40000000000000002"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="glowAmount">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientRotateSpeed">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor2">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <integer key="value" value="0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor3">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <integer key="value" value="0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressInsideFillColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1232,6 +1232,47 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressInsideFillColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-0W-XJa" customClass="KDCircularProgress" customModule="HeroWatch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor3">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor2">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressInsideFillColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressThickness">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowAmount">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientRotateSpeed">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1334,10 +1375,14 @@
                             <constraint firstItem="kSA-hu-lbZ" firstAttribute="trailing" secondItem="qqU-0W-XJa" secondAttribute="trailing" id="14v-MG-aGT"/>
                             <constraint firstItem="esG-bt-9Dt" firstAttribute="top" secondItem="JWg-pn-1Uj" secondAttribute="bottom" constant="8" symbolic="YES" id="CCj-Yq-laS"/>
                             <constraint firstItem="kSA-hu-lbZ" firstAttribute="bottom" secondItem="icV-R7-T3a" secondAttribute="bottom" id="HGH-HH-fuD"/>
+                            <constraint firstItem="TGZ-54-YBe" firstAttribute="trailing" secondItem="qqU-0W-XJa" secondAttribute="trailing" id="HNT-RM-wVM"/>
+                            <constraint firstItem="TGZ-54-YBe" firstAttribute="bottom" secondItem="icV-R7-T3a" secondAttribute="bottom" id="MF2-EJ-gHK"/>
                             <constraint firstItem="qqU-0W-XJa" firstAttribute="top" secondItem="oPc-Mq-TX1" secondAttribute="topMargin" constant="-1" id="PGB-gH-7Tt"/>
+                            <constraint firstItem="TGZ-54-YBe" firstAttribute="top" secondItem="icV-R7-T3a" secondAttribute="top" id="QGe-Az-YGX"/>
                             <constraint firstItem="kSA-hu-lbZ" firstAttribute="trailing" secondItem="icV-R7-T3a" secondAttribute="trailing" id="QLY-M8-Zcw"/>
                             <constraint firstItem="kSA-hu-lbZ" firstAttribute="leading" secondItem="qqU-0W-XJa" secondAttribute="leading" id="SEN-HT-vZN"/>
                             <constraint firstItem="esG-bt-9Dt" firstAttribute="centerX" secondItem="oPc-Mq-TX1" secondAttribute="centerX" id="VhM-5u-mtk"/>
+                            <constraint firstItem="TGZ-54-YBe" firstAttribute="leading" secondItem="kSA-hu-lbZ" secondAttribute="leading" id="W25-4P-qyO"/>
                             <constraint firstItem="qqU-0W-XJa" firstAttribute="top" secondItem="kSA-hu-lbZ" secondAttribute="top" id="jCB-kF-26g"/>
                             <constraint firstItem="icV-R7-T3a" firstAttribute="bottom" secondItem="qqU-0W-XJa" secondAttribute="bottom" id="lYN-SK-WCn"/>
                             <constraint firstItem="kSA-hu-lbZ" firstAttribute="centerX" secondItem="esG-bt-9Dt" secondAttribute="centerX" id="vKv-g3-X6z"/>
@@ -1346,12 +1391,17 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="qqU-0W-XJa"/>
+                                <exclude reference="TGZ-54-YBe"/>
                                 <exclude reference="kSA-hu-lbZ"/>
+                                <exclude reference="qqU-0W-XJa"/>
                                 <exclude reference="esG-bt-9Dt"/>
                                 <exclude reference="icV-R7-T3a"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="HNT-RM-wVM"/>
+                                <exclude reference="MF2-EJ-gHK"/>
+                                <exclude reference="QGe-Az-YGX"/>
+                                <exclude reference="W25-4P-qyO"/>
                                 <exclude reference="0Vg-Ay-zke"/>
                                 <exclude reference="lYN-SK-WCn"/>
                                 <exclude reference="wVE-b1-xuE"/>
@@ -1369,12 +1419,17 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="qqU-0W-XJa"/>
+                                <include reference="TGZ-54-YBe"/>
                                 <include reference="kSA-hu-lbZ"/>
+                                <include reference="qqU-0W-XJa"/>
                                 <include reference="esG-bt-9Dt"/>
                                 <include reference="icV-R7-T3a"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="HNT-RM-wVM"/>
+                                <include reference="MF2-EJ-gHK"/>
+                                <include reference="QGe-Az-YGX"/>
+                                <include reference="W25-4P-qyO"/>
                                 <include reference="0Vg-Ay-zke"/>
                                 <include reference="lYN-SK-WCn"/>
                                 <include reference="wVE-b1-xuE"/>
@@ -1393,6 +1448,7 @@
                     </view>
                     <connections>
                         <outlet property="activityView" destination="esG-bt-9Dt" id="Jh5-Qz-X0q"/>
+                        <outlet property="circleFour" destination="TGZ-54-YBe" id="CWw-7v-PCd"/>
                         <outlet property="circleOne" destination="icV-R7-T3a" id="YfF-wm-GDD"/>
                         <outlet property="circleThree" destination="kSA-hu-lbZ" id="RmV-CS-laq"/>
                         <outlet property="circleTwo" destination="qqU-0W-XJa" id="t8g-fS-JN6"/>

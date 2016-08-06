@@ -15,6 +15,7 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var circleOne: KDCircularProgress!
     @IBOutlet weak var circleTwo: KDCircularProgress!
     @IBOutlet weak var circleThree: KDCircularProgress!
+    @IBOutlet weak var circleFour: KDCircularProgress!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var summaryLabel: UILabel!
     
@@ -45,14 +46,16 @@ class GraphViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     
     private func update() {
+        if userIsReady && compIsReady && quickIsReady {
         self.update(.Wins)
+        }
     }
     
-    private func getJSON (object : AnyObject, flag : Bool) {
-    }
+
     
-    private func displaycircle (circle : KDCircularProgress, toAngle : Int, color : UIColor, zPos: CGFloat) {
-        circle.animateFromAngle(0, toAngle: toAngle , duration: 2.5, completion: nil)
+    
+    private func displaycircle (circle : KDCircularProgress, fromAngle : Int, toAngle : Int, color : UIColor, zPos: CGFloat) {
+        circle.animateFromAngle(0, toAngle: toAngle , duration: 4.5, completion: nil)
         circle.layer.zPosition = zPos
         circle.setColors(color)
     }
@@ -68,6 +71,7 @@ class GraphViewController: UIViewController {
                 print(json)
                 self.userInfo = User(JSON: json)
                 self.userIsReady = true
+                self.update()
             }
         }
         
@@ -81,6 +85,8 @@ class GraphViewController: UIViewController {
                 print(json)
                 self.quickAllHeroes = AllHeroes(JSON: json)
                 self.quickIsReady = true
+                self.update()
+
 
             }
         }
@@ -94,6 +100,8 @@ class GraphViewController: UIViewController {
                 print(json)
                 self.compAllHeroes = AllHeroes(JSON: json)
                 self.compIsReady = true
+                self.update()
+
 
             }
         }
@@ -107,23 +115,30 @@ class GraphViewController: UIViewController {
         
         
         var hideThree = false
+        var hideFour = false
         var labels : Array<String> = []
         
         UIUtilities.adjustActivity(activityView, stop: true)
+        
         circleThree.hidden = true
+        circleFour.hidden = true
+  
+
         switch kind {
         case .Wins:
             angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "Win", labelTwo: "Lose")
             
             hideThree = true
+            hideFour = true
+
         case .Kills:
-            angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "Win", labelTwo: "Lose")
+            angles = CircleAngles(valueOne: self.quickAllHeroes.get(.Eliminations) as! String, valueTwo: self.quickAllHeroes.get(.Deaths) as! String, valueThree: self.compAllHeroes.get(.Eliminations) as! String, valueFour: self.compAllHeroes.get(.Deaths) as! String, labelOne: "Quickplay Eliminations", labelTwo: "Quickplay Deaths", labelThree: "Competitive Eliminations", labelFour: "Competitive Deaths")
         }
         
         dispatch_async(dispatch_get_main_queue(), {
             
-            self.displaycircle(self.circleOne, toAngle: angles.get(.EndOne), color: self.colors[1], zPos: 2)
-            self.displaycircle(self.circleTwo, toAngle: angles.get(.EndTwo), color: self.colors[2], zPos: 1)
+            self.displaycircle(self.circleOne,fromAngle: 0, toAngle: angles.get(.EndOne), color: self.colors[1], zPos: 3)
+            self.displaycircle(self.circleTwo, fromAngle: angles.get(.EndOne), toAngle: angles.get(.EndTwo), color: self.colors[2], zPos: 2)
             self.summaryLabel.text = "Total : " + String(angles.get(.Total))
             
             
@@ -131,9 +146,15 @@ class GraphViewController: UIViewController {
             labels.append(angles.get(.LabelTwo))
             
             if !hideThree {
-                self.displaycircle(self.circleThree, toAngle: angles.get(.EndThree), color: self.colors[3], zPos: 0)
+                self.displaycircle(self.circleThree,fromAngle: angles.get(.EndTwo), toAngle: angles.get(.EndThree), color: self.colors[3], zPos: 1)
                 self.circleThree.hidden = false
                 labels.append(angles.get(.LabelThree))
+            }
+            
+            if !hideFour {
+                self.displaycircle(self.circleFour,fromAngle: angles.get(.EndThree), toAngle: angles.get(.EndFour), color: self.colors[0], zPos: 0)
+                self.circleFour.hidden = false
+                labels.append(angles.get(.LabelFour))
             }
             
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
