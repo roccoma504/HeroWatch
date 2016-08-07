@@ -1,14 +1,9 @@
-language: objective-c
+language: objective-c  
+osx_image: xcode7.3 
+xcode_project: HeroWatch.xcodeproj 
+xcode_scheme: HeroWatch 
+xcode_sdk: iphonesimulator9.3
 
-branches:
- only:
- - master
- 
-osx_image: xcode7.1
-xcode_sdk: iphonesimulator9.1 
-
-cache: cocoapods
-
-script: xcodebuild -sdk iphonesimulator9.1 build clean test -enableCodeCoverage YES -project HeroWatch.xcodeproj -scheme HeroWatchTests CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 after_success:
+
   - bash <(curl -s https://codecov.io/bash)
