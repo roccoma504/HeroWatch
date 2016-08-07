@@ -29,9 +29,7 @@ class JSONUtilities {
     static func downloadImage(url : NSURL, completion: (image : UIImage, error: NSError?) -> Void) -> () {
         getDataFromUrl(url) { (data, response, error)  in
             guard let data = data where error == nil else {
-                print("error downloading picture")
                 return }
-            print("image downloaded")
             completion(image: UIImage(data: data)!, error: error)
         }
     }

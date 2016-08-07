@@ -361,11 +361,24 @@
                                     <segue destination="73V-Tg-h6s" kind="embed" id="smy-Xb-S9l"/>
                                 </connections>
                             </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSo-bW-xfK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Quick Play" id="qSi-eO-PsX">
+                                        <connections>
+                                            <action selector="switchPlayButton:" destination="e3M-ac-uJr" id="U6V-hQ-QqN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tyo-Bp-gl1" secondAttribute="trailing" id="0hf-16-TW0"/>
-                            <constraint firstItem="h9v-8A-KpT" firstAttribute="bottom" secondItem="3SA-ed-nDB" secondAttribute="top" id="6Rp-oN-edi"/>
+                            <constraint firstItem="h9v-8A-KpT" firstAttribute="bottom" secondItem="3SA-ed-nDB" secondAttribute="top" id="6Rp-oN-edi">
+                                <variation key="widthClass=compact" constant="-44"/>
+                            </constraint>
+                            <constraint firstItem="dSo-bW-xfK" firstAttribute="top" secondItem="h9v-8A-KpT" secondAttribute="bottom" id="9BE-S0-7eh"/>
                             <constraint firstItem="h9v-8A-KpT" firstAttribute="top" secondItem="P75-N0-reo" secondAttribute="bottom" constant="240" id="9ru-pA-18k">
                                 <variation key="widthClass=compact" constant="387"/>
                             </constraint>
@@ -373,16 +386,19 @@
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="tyo-Bp-gl1" firstAttribute="leading" secondItem="LQX-Tr-TJS" secondAttribute="leading" id="S7W-tf-hOK"/>
+                            <constraint firstItem="dSo-bW-xfK" firstAttribute="leading" secondItem="h9v-8A-KpT" secondAttribute="leading" id="V1e-vS-Mjl"/>
                             <constraint firstItem="tyo-Bp-gl1" firstAttribute="bottom" secondItem="3SA-ed-nDB" secondAttribute="top" id="ahI-w3-pGP">
                                 <variation key="widthClass=compact" constant="-148"/>
                             </constraint>
                             <constraint firstItem="tyo-Bp-gl1" firstAttribute="leading" secondItem="h9v-8A-KpT" secondAttribute="leading" id="hbO-y5-PtK"/>
+                            <constraint firstItem="dSo-bW-xfK" firstAttribute="trailing" secondItem="h9v-8A-KpT" secondAttribute="trailing" id="pJb-0R-8X4"/>
                             <constraint firstItem="tyo-Bp-gl1" firstAttribute="trailing" secondItem="h9v-8A-KpT" secondAttribute="trailing" id="qa1-Gj-e8i"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tyo-Bp-gl1"/>
                                 <exclude reference="h9v-8A-KpT"/>
+                                <exclude reference="dSo-bW-xfK"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0hf-16-TW0"/>
@@ -393,12 +409,16 @@
                                 <exclude reference="qa1-Gj-e8i"/>
                                 <exclude reference="6Rp-oN-edi"/>
                                 <exclude reference="9ru-pA-18k"/>
+                                <exclude reference="9BE-S0-7eh"/>
+                                <exclude reference="V1e-vS-Mjl"/>
+                                <exclude reference="pJb-0R-8X4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="tyo-Bp-gl1"/>
                                 <include reference="h9v-8A-KpT"/>
+                                <include reference="dSo-bW-xfK"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0hf-16-TW0"/>
@@ -409,6 +429,9 @@
                                 <include reference="qa1-Gj-e8i"/>
                                 <include reference="6Rp-oN-edi"/>
                                 <include reference="9ru-pA-18k"/>
+                                <include reference="9BE-S0-7eh"/>
+                                <include reference="V1e-vS-Mjl"/>
+                                <include reference="pJb-0R-8X4"/>
                             </mask>
                         </variation>
                     </view>
@@ -424,6 +447,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="quickPlayButton" destination="qSi-eO-PsX" id="O8f-rt-iXx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsN-3p-3iW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1284,8 +1310,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1L-Lr-hOD">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.76089900732040405" green="0.25649610161781311" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="per-My-HyB">
@@ -1467,19 +1493,21 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7zK-CK-wgt">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="Qgl-NB-dQT" customClass="GeneralTableViewCell" customModule="HeroWatch" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qgl-NB-dQT" id="Du9-Qp-bq7">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-Sh-sof">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-Sh-sof">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="hwz-Sh-sof" firstAttribute="leading" secondItem="Du9-Qp-bq7" secondAttribute="leadingMargin" id="Me8-bB-1PO"/>
                                         <constraint firstItem="hwz-Sh-sof" firstAttribute="top" secondItem="Du9-Qp-bq7" secondAttribute="topMargin" constant="3" id="P0M-RI-Mp3"/>

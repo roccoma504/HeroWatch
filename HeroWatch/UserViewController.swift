@@ -27,7 +27,6 @@ class UserViewController: UIViewController {
         view.backgroundColor = ContrastColorOf(PRIMARY_COLOR, returnFlat: true)
         
         instructionLabel.textColor = SECONDARY_COLOR
-        
         checkButton.backgroundColor = PRIMARY_COLOR
         checkButton.layer.cornerRadius = 5
         checkButton.layer.borderWidth = 1
@@ -79,7 +78,6 @@ class UserViewController: UIViewController {
                 
             }
             
-            print (json)
         }
     }
     

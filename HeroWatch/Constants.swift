@@ -69,6 +69,11 @@ let heroImageMap = ["Soldier: 76":"soldier_76.png",
                     "Lucio":"lucio.png",
                     "Reinhardt":"reinhardt.png"]
 
+enum StatKind : String {
+    case Quick = "QP" 
+    case Competitive = "CP"
+}
+
 extension String {
     private func replace(string:String, replacement:String) -> String {
         return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)

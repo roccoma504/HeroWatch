@@ -178,14 +178,14 @@
 		393D9EB61D3F1B86005C8CC2 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3926D00E1D5676F7006A17E4 /* GeneralTableTableViewController.swift */,
+				3926D0101D56770D006A17E4 /* GeneralTableViewCell.swift */,
 				393D9ECE1D484651005C8CC2 /* GraphViewController.swift */,
 				3926D00B1D558558006A17E4 /* ParentViewController.swift */,
 				393D9F051D4C4EB3005C8CC2 /* SettingsViewController.swift */,
 				393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */,
 				393D9EAF1D3EFAAB005C8CC2 /* UserViewController.swift */,
 				393D9EAB1D3EF1D7005C8CC2 /* WelcomeViewController.swift */,
-				3926D00E1D5676F7006A17E4 /* GeneralTableTableViewController.swift */,
-				3926D0101D56770D006A17E4 /* GeneralTableViewCell.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";

@@ -80,7 +80,6 @@ class SettingsViewController: UIViewController {
                 }
                 
             }
-            print (json)
         }
     }
     

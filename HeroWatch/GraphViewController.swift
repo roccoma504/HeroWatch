@@ -22,20 +22,21 @@ class GraphViewController: UIViewController {
     private enum GraphKind : Int {
         case Wins = 0
         case Kills
+        case Damage
     }
     
     private let prefs = NSUserDefaults.standardUserDefaults()
     
-    var colors = [UIColor]()
-    
+    private var colors = [UIColor]()
+    private var stat : StatKind = .Quick
     private var userInfo : User!
     private var quickAllHeroes : AllHeroes!
     private var compAllHeroes : AllHeroes!
     private var userIsReady = false
     private var quickIsReady = false
     private var compIsReady = false
-
-
+    private var isQuick = true
+    
     // create swipe gesture
     let swipeGestureLeft = UISwipeGestureRecognizer()
     let swipeGestureRight = UISwipeGestureRecognizer()
@@ -45,17 +46,14 @@ class GraphViewController: UIViewController {
     // outlet - page control
     @IBOutlet var pageControl: UIPageControl!
     
-    private func update() {
+    private func checkReady(kind : GraphKind) {
         if userIsReady && compIsReady && quickIsReady {
-        self.update(.Wins)
+            self.update(kind)
         }
     }
     
-
-    
-    
     private func displaycircle (circle : KDCircularProgress, fromAngle : Int, toAngle : Int, color : UIColor, zPos: CGFloat) {
-        circle.animateFromAngle(0, toAngle: toAngle , duration: 4.5, completion: nil)
+        circle.animateFromAngle(0, toAngle: toAngle , duration: 2.0, completion: nil)
         circle.layer.zPosition = zPos
         circle.setColors(color)
     }
@@ -68,10 +66,9 @@ class GraphViewController: UIViewController {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
             }
             else {
-                print(json)
                 self.userInfo = User(JSON: json)
                 self.userIsReady = true
-                self.update()
+                self.checkReady(.Wins)
             }
         }
         
@@ -82,12 +79,11 @@ class GraphViewController: UIViewController {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
             }
             else {
-                print(json)
                 self.quickAllHeroes = AllHeroes(JSON: json)
                 self.quickIsReady = true
-                self.update()
-
-
+                self.checkReady(.Wins)
+                
+                
             }
         }
         
@@ -97,83 +93,90 @@ class GraphViewController: UIViewController {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
             }
             else {
-                print(json)
                 self.compAllHeroes = AllHeroes(JSON: json)
                 self.compIsReady = true
-                self.update()
-
-
+                self.checkReady(.Wins)
             }
         }
-
-
-        
     }
     
     private func update(kind : GraphKind) {
         let angles : CircleAngles!
         
-        
-        var hideThree = false
-        var hideFour = false
         var labels : Array<String> = []
         
-        UIUtilities.adjustActivity(activityView, stop: true)
-        
-        circleThree.hidden = true
-        circleFour.hidden = true
-  
-
         switch kind {
         case .Wins:
-            angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "Win", labelTwo: "Lose")
+            if isQuick {
+                angles = CircleAngles(valueOne: self.userInfo.get(.QW) as! String, valueTwo: self.userInfo.get(.QL) as! String, labelOne: "Win", labelTwo: "Lost")
+            }
+            else {
+                angles = CircleAngles(valueOne: self.userInfo.get(.CW) as! String, valueTwo: self.userInfo.get(.CL) as! String, labelOne: "Win", labelTwo: "Lost")
+            }
             
-            hideThree = true
-            hideFour = true
-
         case .Kills:
-            angles = CircleAngles(valueOne: self.quickAllHeroes.get(.Eliminations) as! String, valueTwo: self.quickAllHeroes.get(.Deaths) as! String, valueThree: self.compAllHeroes.get(.Eliminations) as! String, valueFour: self.compAllHeroes.get(.Deaths) as! String, labelOne: "Quickplay Eliminations", labelTwo: "Quickplay Deaths", labelThree: "Competitive Eliminations", labelFour: "Competitive Deaths")
+            if isQuick {
+                angles = CircleAngles(valueOne: self.quickAllHeroes.get(.Eliminations) as! String, valueTwo: self.quickAllHeroes.get(.Deaths) as! String, labelOne: "Eliminations", labelTwo: "Deaths")
+            }
+            else {
+                angles = CircleAngles(valueOne: self.compAllHeroes.get(.Eliminations) as! String, valueTwo: self.compAllHeroes.get(.Deaths) as! String, labelOne: "Eliminations", labelTwo: "Deaths")
+            }
+            
+        case .Damage:
+            if isQuick {
+                angles = CircleAngles(valueOne: self.quickAllHeroes.get(.Damage) as! String, valueTwo: self.quickAllHeroes.get(.Healing) as! String, labelOne: "Damage", labelTwo: "Healing")
+            }
+            else {
+                angles = CircleAngles(valueOne: self.compAllHeroes.get(.Damage) as! String, valueTwo: self.compAllHeroes.get(.Healing) as! String, labelOne: "Damage", labelTwo: "Healing")
+            }
+            
         }
         
         dispatch_async(dispatch_get_main_queue(), {
             
-            self.displaycircle(self.circleOne,fromAngle: 0, toAngle: angles.get(.EndOne), color: self.colors[1], zPos: 3)
-            self.displaycircle(self.circleTwo, fromAngle: angles.get(.EndOne), toAngle: angles.get(.EndTwo), color: self.colors[2], zPos: 2)
-            self.summaryLabel.text = "Total : " + String(angles.get(.Total))
+            self.summaryLabel.text = String(angles.get(.Total)).addComma()
             
+            self.displaycircle(self.circleOne,fromAngle: 0, toAngle: angles.get(.EndOne), color: FlatMint(), zPos: 3)
+            self.displaycircle(self.circleTwo, fromAngle: angles.get(.EndOne), toAngle: angles.get(.EndTwo), color: FlatPurple(), zPos: 2)
+            //self.displaycircle(self.circleThree,fromAngle: angles.get(.EndTwo), toAngle: angles.get(.EndThree), color: self.colors[2], zPos: 1)
+            //self.displaycircle(self.circleFour,fromAngle: angles.get(.EndThree), toAngle: angles.get(.EndFour), color: self.colors[3], zPos: 0)
             
             labels.append(angles.get(.LabelOne))
             labels.append(angles.get(.LabelTwo))
+            //labels.append(angles.get(.LabelThree))
+            //labels.append(angles.get(.LabelFour))
             
-            if !hideThree {
-                self.displaycircle(self.circleThree,fromAngle: angles.get(.EndTwo), toAngle: angles.get(.EndThree), color: self.colors[3], zPos: 1)
-                self.circleThree.hidden = false
-                labels.append(angles.get(.LabelThree))
-            }
-            
-            if !hideFour {
-                self.displaycircle(self.circleFour,fromAngle: angles.get(.EndThree), toAngle: angles.get(.EndFour), color: self.colors[0], zPos: 0)
-                self.circleFour.hidden = false
-                labels.append(angles.get(.LabelFour))
-            }
+            UIUtilities.adjustActivity(self.activityView, stop: true)
+            UIUtilities.adjustAlpha(self.view, alpha: 1.0)
             
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
-
-
+            
+            
         })
     }
     
+    func switchType(notification: NSNotification){
+        dispatch_async(dispatch_get_main_queue(), {
+            self.isQuick =  notification.object as! Bool
+            self.checkReady(GraphKind(rawValue: self.pageControl.currentPage)!)
+        })
+    }
     
     // MARK: - view functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colors = ColorSchemeOf(.Analogous, color: SECONDARY_COLOR, isFlatScheme: true)
+        colors = ColorSchemeOf(.Complementary, color: FlatPurple(), isFlatScheme: true)
         activityView.color = colors[4]
-        pageControl.numberOfPages = GraphKind.Kills.rawValue + 1
+        pageControl.numberOfPages = GraphKind.Damage.rawValue + 1
         pageControl.tintColor = self.colors[4]
         view.backgroundColor = FlatWhite()
+        UIUtilities.adjustAlpha(view, alpha: 0.5)
+        summaryLabel.text = "Loading..."
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchType:",name:"switch", object: nil)
+        
         
         
         

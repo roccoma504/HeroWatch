@@ -38,7 +38,7 @@ class User: NSObject {
             return String(JSON["data"]!["games"]!!["quick"]!!["lost"] as! Int)
             
         case .CW:
-            return JSON["data"]!["games"]!!["competitive"]!!["wins"] as! Int
+            return JSON["data"]!["games"]!!["competitive"]!!["wins"] as! String
             
         case .CL:
             return String(JSON["data"]!["games"]!!["competitive"]!!["lost"] as! Int)
