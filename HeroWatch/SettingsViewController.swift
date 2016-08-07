@@ -68,16 +68,17 @@ class SettingsViewController: UIViewController {
                 
             }
             else {
-                UIUtilities.displayAlert(self, title: "Success!", message: "Information updated.")
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock {
+                dispatch_async(dispatch_get_main_queue(), {
                     self.prefs.setObject(id, forKey: "id")
                     self.prefs.setObject(console, forKey: "console")
                     self.prefs.setObject(region, forKey: "region")
                     self.prefs.setObject(json["level"], forKey: "level")
                     self.prefs.setObject(json["data"]!["competitive"]!!["rank"] as! String, forKey: "rank")
                     self.prefs.setObject(json["data"]!["avatar"] as! String, forKey: "avatar")
-                }
+                    })
+
+                UIUtilities.displayAlert(self, title: "Success!", message: "Information updated.")
+                
                 
             }
         }

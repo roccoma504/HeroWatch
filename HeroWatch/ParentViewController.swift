@@ -31,20 +31,26 @@ class ParentViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName("switch", object: isQuick)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func update() {
         title = prefs.stringForKey("id")!.uppercaseString
         prefs.setBool(true, forKey: "quickMode")
         quickPlayButton.title = "Quick Play"
-        
-        
-        
-        // Do any additional setup after loading the view.
+    
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        update()
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        update()
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

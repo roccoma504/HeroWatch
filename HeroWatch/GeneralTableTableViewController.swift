@@ -22,7 +22,7 @@ class GeneralTableTableViewController: UITableViewController {
         
 
     }
-    
+        
     func loadList(notification: NSNotification){
         dispatch_async(dispatch_get_main_queue(), {
             let arrayObject =  notification.object as! [AnyObject]

@@ -108,6 +108,7 @@
 		3926D00D1D5676A2006A17E4 /* New Features */ = {
 			isa = PBXGroup;
 			children = (
+				393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */,
 				397E237E1D4E8FB70094F72D /* AddFriendViewController.swift */,
 				397E23841D500DBC0094F72D /* CompareTableViewCell.swift */,
 				397E23821D500DA90094F72D /* CompareTableViewController.swift */,
@@ -183,7 +184,6 @@
 				393D9ECE1D484651005C8CC2 /* GraphViewController.swift */,
 				3926D00B1D558558006A17E4 /* ParentViewController.swift */,
 				393D9F051D4C4EB3005C8CC2 /* SettingsViewController.swift */,
-				393D9ECC1D483BCA005C8CC2 /* UserInfoViewController.swift */,
 				393D9EAF1D3EFAAB005C8CC2 /* UserViewController.swift */,
 				393D9EAB1D3EF1D7005C8CC2 /* WelcomeViewController.swift */,
 			);
