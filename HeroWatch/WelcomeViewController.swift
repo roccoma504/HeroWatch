@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController {
         
         navigationController?.hidesNavigationBarHairline = true
         welcomeLabel.textColor = PRIMARY_COLOR
-        blizzardLabel.textColor = PRIMARY_COLOR
     }
     
     /**

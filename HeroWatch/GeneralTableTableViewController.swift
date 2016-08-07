@@ -13,14 +13,11 @@ class GeneralTableTableViewController: UITableViewController {
     
     private var receivedData : Array <String>!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = FlatWhite()
         tableView.tableFooterView = UIView()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: receivedData)
-        
-
     }
         
     func loadList(notification: NSNotification){
@@ -45,10 +42,8 @@ class GeneralTableTableViewController: UITableViewController {
             return 0
         }
         else {
-            print (self.receivedData.count)
             return self.receivedData.count
         }
-        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,8 +53,6 @@ class GeneralTableTableViewController: UITableViewController {
         cell.labelOne.text = receivedData[indexPath.row]
         cell.labelOne.textColor = colors[indexPath.row]
         cell.backgroundColor = FlatWhite()
-        
-        
         
         return cell
     }

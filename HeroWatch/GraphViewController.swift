@@ -89,8 +89,6 @@ class GraphViewController: UIViewController {
                 self.quickAllHeroes = AllHeroes(JSON: json)
                 self.quickIsReady = true
                 self.checkReady(.Wins)
-                
-                
             }
         }
         
@@ -173,10 +171,8 @@ class GraphViewController: UIViewController {
                 
             }
             
-            
             UIUtilities.adjustActivity(self.activityView, stop: true)
             UIUtilities.adjustAlpha(self.view, alpha: 1.0)
-            
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
             
         })
@@ -205,8 +201,6 @@ class GraphViewController: UIViewController {
         // add gesture in to view
         view.addGestureRecognizer(swipeGestureLeft)
         view.addGestureRecognizer(swipeGestureRight)
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -223,7 +217,6 @@ class GraphViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Utility function

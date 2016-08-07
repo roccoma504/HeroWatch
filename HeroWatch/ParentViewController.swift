@@ -35,18 +35,15 @@ class ParentViewController: UIViewController {
         title = prefs.stringForKey("id")!.uppercaseString
         prefs.setBool(true, forKey: "quickMode")
         quickPlayButton.title = "Quick Play"
-    
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
-
     }
     
     override func viewDidAppear(animated: Bool) {
         update()
-
     }
     
     override func didReceiveMemoryWarning() {

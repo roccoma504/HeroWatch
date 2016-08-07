@@ -24,18 +24,13 @@ class AddFriendViewController: UIViewController {
         
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("friends") as? NSData {
             friends = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Friend]
-            print(friends)
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func addFriend(sender: AnyObject) {
         friends.append(Friend(name: idTextField.text!, region: REGION_ARRAY[regionSelector.selectedSegmentIndex], platform: CONSOLE_ARRAY[platformSelector.selectedSegmentIndex]))
         let data = NSKeyedArchiver.archivedDataWithRootObject(friends)

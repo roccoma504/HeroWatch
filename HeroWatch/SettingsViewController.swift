@@ -78,8 +78,6 @@ class SettingsViewController: UIViewController {
                     })
 
                 UIUtilities.displayAlert(self, title: "Success!", message: "Information updated.")
-                
-                
             }
         }
     }
