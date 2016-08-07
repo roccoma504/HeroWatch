@@ -13,18 +13,11 @@
 		<key>001B8A849EDA806B81A1C43536841588</key>
 		<dict>
 			<key>fileRef</key>
-			<string>28D5EF54148F6845BEED329AB8810255</string>
+			<string>1EF82075B6EC23AA0C6E7D2C29B0546B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>02E0AC93116AA3B7BF487EEBF0C6BFA8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1B2A937D5649694949D8B0C99C4C006E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>045A1631A0E861B178A79C12BA522271</key>
+		<key>0575E7550982944F730D4F1A188D775E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -33,9 +26,38 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Chameleon_.m</string>
+			<string>UILabel+Chameleon.m</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/Chameleon_.m</string>
+			<string>Pod/Classes/Objective-C/UILabel+Chameleon.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0A4738876A6132A5C4459E1437F5DE42</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C498FEE8791339163FAA957F0EC5155F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0A895871E747C34E811959E2C837B86D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+ChameleonPrivate.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -101,53 +123,39 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>0BE3954ADB4CD734CFE627E8BCFC8B87</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Chameleon_.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/Chameleon_.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0EA16FFF4CF8444A2A3BE3BB9D6174A8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>0EAC2EC4F8AEA4239AD9BC09C663E8C1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ChameleonEnums.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/ChameleonEnums.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1499C9F3DB9FC014806CE8328A1E4F90</key>
+		<key>0D41BDEF7E6A5E73DC725C9479FC60EB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>764F93220C2ED2A47995A1ADE207FF6A</string>
+			<string>C095FC064C90DC6F363631834F53FEC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0E2BE84282D2B8B23684C408457CDF11</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ChameleonConstants.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/ChameleonConstants.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11190D2343230B3C976C5EB14D22AB4B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6C8C620EF2374BA71059BD7F65F69A29</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -164,14 +172,93 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1586B09403C4C9E2448C36AC244FE0E2</key>
+		<key>1A9A8A590240AA182E192822FCB11E67</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Chameleon_.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/Chameleon_.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D170BA2A9063D45C382FD1E7A559859</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>ChameleonFramework.framework</string>
+			<key>path</key>
+			<string>ChameleonFramework.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1EF82075B6EC23AA0C6E7D2C29B0546B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>20C25610BF2B288FE513F7D30C21829C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7FD1C64D5A1264E0D008B16090FA119F</string>
+				<string>3CF947BE4E79930027FB7B17D994245B</string>
+				<string>2B073752216AD8113AA996D89417FE72</string>
+				<string>D2F000350CDBB925733DB0EA359568A1</string>
+				<string>963B0A333A47E1AC8160C74B32A71E7A</string>
+				<string>B8E9338981F51977C88D849E9E2A4408</string>
+				<string>FAF88484C61CD91EC48D7D8B66A867E1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/ChameleonFramework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>20C2A8F0CBFC98F4AD7A9620311BA125</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF39FF3F3898729A37B28DEC068A6519</string>
+			<string>547133AC6F43F660B2E4E00471F3BB52</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>17AEA04B3A2E2BCB4128C8DBF3C5DFD8</key>
+		<key>211678A97FA4F863D4466D9A7D454833</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ChameleonEnums.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/ChameleonEnums.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>23A2CFA0562A6AD6FCEEA0F16BD635DA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -186,17 +273,81 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1832537F319155891943D155A172BC43</key>
+		<key>24116F59DB6971ACF1864BF6A8AD6820</key>
 		<dict>
-			<key>fileRef</key>
-			<string>C37E3EF9956831A8EAB3B3CEA04C8EE5</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIAppearance+Swift.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIAppearance+Swift.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>18638DF2E3A4D1589BBDBF870705A385</key>
+		<key>24E16FB3BEA641B5131EEEB4ABC930F5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2B073752216AD8113AA996D89417FE72</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>2.1.0</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>2</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>$(CURRENT_PROJECT_VERSION)</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/ChameleonFramework/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/ChameleonFramework/ChameleonFramework.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>ChameleonFramework</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2680D1E898463B4718B8C32684B2947E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C13A41846BAB152F205344D5A871C16B</string>
+			<string>964D4CC591136346EA6226281F32824C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -207,7 +358,21 @@
 				</array>
 			</dict>
 		</dict>
-		<key>1A710098E52A5D06D5AB3A241823EC25</key>
+		<key>29DA29D5A41D21FC6FE2DA5583612E86</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7C1FEC87F40AA91D25B62834607EEE1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>2B073752216AD8113AA996D89417FE72</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -220,82 +385,63 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1B2A937D5649694949D8B0C99C4C006E</key>
+		<key>2BE7F8900F927EF0C1B5403489299358</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIColor+Chameleon.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIColor+Chameleon.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20C25610BF2B288FE513F7D30C21829C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7FD1C64D5A1264E0D008B16090FA119F</string>
-				<string>3CF947BE4E79930027FB7B17D994245B</string>
-				<string>1A710098E52A5D06D5AB3A241823EC25</string>
-				<string>7B6973A366E06C007B97473AD90672BF</string>
-				<string>963B0A333A47E1AC8160C74B32A71E7A</string>
-				<string>F6631D6440E215F53A5273BA8ACCCA19</string>
-				<string>FAF88484C61CD91EC48D7D8B66A867E1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/ChameleonFramework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2397A625D3911B621FDFF9E1155F9174</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D8E203C08955BAAA0D48EF6A846154E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
+			<key>baseConfigurationReference</key>
+			<string>2B073752216AD8113AA996D89417FE72</string>
+			<key>buildSettings</key>
 			<dict>
-				<key>ATTRIBUTES</key>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>2.1.0</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>2</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>$(CURRENT_PROJECT_VERSION)</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/ChameleonFramework/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<array>
-					<string>Public</string>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
 				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/ChameleonFramework/ChameleonFramework.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>ChameleonFramework</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
 			</dict>
-		</dict>
-		<key>26C3A93B0FB69CDB72C97DFCE3B23EE3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7D5A79B8B7BEE0693B2749692689E61</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>280D187D5DC10EDB27C5DA89C9B75568</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F5608180E5076123261067E1E39AC2F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>28D5EF54148F6845BEED329AB8810255</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>Debug</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -311,14 +457,49 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2F90170DA8F1BCEA0095A3FF6C6103E8</key>
+		<key>2DA79FE4889F990E06344C56E19517EA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C5C33254A6BC35ACB4C819B22A243C19</string>
+			<string>3DDE45C5B832D3415DC586E9D97228AD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>340EB10E3BCEE3BAE58EEC0E0A2901D1</key>
+		<key>2FEBC00383C6867664B23602A2EC9AE4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>211678A97FA4F863D4466D9A7D454833</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>35B12A9A0401A00F143433FC102D89DB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2BE7F8900F927EF0C1B5403489299358</string>
+				<string>24E16FB3BEA641B5131EEEB4ABC930F5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>363602AEF45F7C427AEDEB51BB40574E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -327,9 +508,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIButton+Chameleon.m</string>
+			<string>UIView+ChameleonPrivate.m</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIButton+Chameleon.m</string>
+			<string>Pod/Classes/Objective-C/UIView+ChameleonPrivate.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -346,6 +527,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>3CD8CBB547DF1E403318844D8D8EA88F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIButton+Chameleon.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIButton+Chameleon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>3CF947BE4E79930027FB7B17D994245B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -359,18 +555,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3DA91BC0A82F49B0E42F56DC5953753A</key>
+		<key>3DDE45C5B832D3415DC586E9D97228AD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIViewController+Chameleon.m</string>
+			<string>UIColor+Chameleon.h</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIViewController+Chameleon.m</string>
+			<string>Pod/Classes/Objective-C/UIColor+Chameleon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4177B5DD653539111FAE3DEF13878E6A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+ChameleonPrivate.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIView+ChameleonPrivate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -388,6 +599,20 @@
 			<string>Pods.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4418BF936D53B2D3A935D47D0C00EA2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BD15CBADC5953669BB8CC28A5541EF99</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>457A03844D9652A9D6C39C15BBDABF25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>702A72269862853868003FD867F095A8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>4603A5208064E27DB89B5655B8267F46</key>
 		<dict>
@@ -449,47 +674,62 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>464451E9C149A654E89725EDBCC2B413</key>
+		<key>4AB675252D1911B09213C9DCE518F133</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D67FAEDC15F8D5792F13EEF6CE7AB392</string>
+				<string>7CEF4609876A6581EB94641341725070</string>
+				<string>20C2A8F0CBFC98F4AD7A9620311BA125</string>
+				<string>11190D2343230B3C976C5EB14D22AB4B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DA0158884D69F8CE56404640439B816</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B95008AC52910B4290B49C61359B9C37</string>
+			<string>87F30BD79A2D053FA63F6596CD9B8081</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>47459C7B901406491CECB0708D6510A5</key>
+		<key>4F39B2E4192D65E6C5E9F0ADC0FD2446</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CD8CBB547DF1E403318844D8D8EA88F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>526154C86CA99E71B39AA1B44B5206F3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UILabel+Chameleon.h</string>
+			<string>UINavigationController+Chameleon.m</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UILabel+Chameleon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F76F423B82336908459C5C08E3B4A68</key>
-		<dict>
-			<key>fileRef</key>
-			<string>17AEA04B3A2E2BCB4128C8DBF3C5DFD8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>51807D1A2B94C3B828452CEAF6606891</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIView+ChameleonPrivate.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIView+ChameleonPrivate.h</string>
+			<string>Pod/Classes/Objective-C/UINavigationController+Chameleon.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -497,38 +737,101 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>E20E7C23AF6DC1E20DBC733FC957CB21</string>
-				<string>B5E960B68691CE74ACB75149447AB4E9</string>
-				<string>F5608180E5076123261067E1E39AC2F4</string>
-				<string>0EAC2EC4F8AEA4239AD9BC09C663E8C1</string>
-				<string>8E7AD1910ED7BFF5BFF75DC96155B060</string>
-				<string>0BE3954ADB4CD734CFE627E8BCFC8B87</string>
-				<string>045A1631A0E861B178A79C12BA522271</string>
-				<string>C13A41846BAB152F205344D5A871C16B</string>
-				<string>C7D5A79B8B7BEE0693B2749692689E61</string>
-				<string>8D8E203C08955BAAA0D48EF6A846154E</string>
-				<string>E73695935BD934856E090D3546D11D93</string>
-				<string>FD683250F8CB65AD016A1C19DF016884</string>
-				<string>340EB10E3BCEE3BAE58EEC0E0A2901D1</string>
-				<string>9A0B6684446D7CCF69E8ABC9AA590D45</string>
-				<string>1B2A937D5649694949D8B0C99C4C006E</string>
-				<string>F50DBFC0B4642E034CF2D151840A85C2</string>
-				<string>17AEA04B3A2E2BCB4128C8DBF3C5DFD8</string>
-				<string>78B29AD636AD6C4C4E6E6F96FCFBCB5B</string>
-				<string>E80E899332B0B67E6500F42D027C57CC</string>
-				<string>47459C7B901406491CECB0708D6510A5</string>
-				<string>EF39FF3F3898729A37B28DEC068A6519</string>
-				<string>BE63C03D72E1ACEDE0CCCFE390CF5E0D</string>
-				<string>B10921998C74CCA9A44D42E7B7C18F81</string>
-				<string>51807D1A2B94C3B828452CEAF6606891</string>
-				<string>C37E3EF9956831A8EAB3B3CEA04C8EE5</string>
-				<string>EDCBA38C300122667CCD2416108556AE</string>
-				<string>3DA91BC0A82F49B0E42F56DC5953753A</string>
+				<string>E12CA933BE9C1F9B264963A244AC00BD</string>
+				<string>611245C205589CB9557C0F599561E87C</string>
+				<string>0E2BE84282D2B8B23684C408457CDF11</string>
+				<string>211678A97FA4F863D4466D9A7D454833</string>
+				<string>87F30BD79A2D053FA63F6596CD9B8081</string>
+				<string>1A9A8A590240AA182E192822FCB11E67</string>
+				<string>BD15CBADC5953669BB8CC28A5541EF99</string>
+				<string>C095FC064C90DC6F363631834F53FEC6</string>
+				<string>B5279945709B51DA055FA4BEBA8E669E</string>
+				<string>C498FEE8791339163FAA957F0EC5155F</string>
+				<string>24116F59DB6971ACF1864BF6A8AD6820</string>
+				<string>3CD8CBB547DF1E403318844D8D8EA88F</string>
+				<string>A320C6AEAB3F01776D8216FC77209851</string>
+				<string>3DDE45C5B832D3415DC586E9D97228AD</string>
+				<string>574C8B8F80B8ADEB12736D344326C609</string>
+				<string>5C8700FA1B19A1658A6E99B0463A1D50</string>
+				<string>23A2CFA0562A6AD6FCEEA0F16BD635DA</string>
+				<string>964D4CC591136346EA6226281F32824C</string>
+				<string>0A895871E747C34E811959E2C837B86D</string>
+				<string>B352E9285ACB12D50ECD9D1E49F59823</string>
+				<string>0575E7550982944F730D4F1A188D775E</string>
+				<string>F143CEB319C87B5055A25B1AA63C91CD</string>
+				<string>526154C86CA99E71B39AA1B44B5206F3</string>
+				<string>4177B5DD653539111FAE3DEF13878E6A</string>
+				<string>363602AEF45F7C427AEDEB51BB40574E</string>
+				<string>E7C1FEC87F40AA91D25B62834607EEE1</string>
+				<string>702A72269862853868003FD867F095A8</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Default</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>547133AC6F43F660B2E4E00471F3BB52</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>574C8B8F80B8ADEB12736D344326C609</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIColor+Chameleon.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIColor+Chameleon.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A9B65A0FB67A5F751664DDFD00B4BD1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24116F59DB6971ACF1864BF6A8AD6820</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AD6CDBC45C40E34B03655BAE3036865</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5C8700FA1B19A1658A6E99B0463A1D50</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIColor+ChameleonPrivate.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -605,66 +908,25 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>5F8CECF29E2B1135E86FFDBF568042CF</key>
+		<key>611245C205589CB9557C0F599561E87C</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1A710098E52A5D06D5AB3A241823EC25</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>2.1.0</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>2</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>$(CURRENT_PROJECT_VERSION)</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ChameleonFramework/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ChameleonFramework/ChameleonFramework.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>ChameleonFramework</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>ChameleonConstants.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/ChameleonConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67A9D4DE39E649D9F334689DE24F7327</key>
+		<key>64A56D08489BC720BD194F5F6BD1E695</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F6631D6440E215F53A5273BA8ACCCA19</string>
+			<string>4177B5DD653539111FAE3DEF13878E6A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -675,14 +937,48 @@
 				</array>
 			</dict>
 		</dict>
+		<key>64AA45E800826E922573EB0E21E388F5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>23A2CFA0562A6AD6FCEEA0F16BD635DA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6B499DAAE1FB95D7E4D5EF630AE717E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E2BE84282D2B8B23684C408457CDF11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C2D188837BD1E58B960102CAA26340B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0A895871E747C34E811959E2C837B86D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C8C620EF2374BA71059BD7F65F69A29</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
 		<key>6CB6AAB047A1193DA81CD6676BE1EC87</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>764F93220C2ED2A47995A1ADE207FF6A</string>
-				<string>28D5EF54148F6845BEED329AB8810255</string>
-				<string>0EA16FFF4CF8444A2A3BE3BB9D6174A8</string>
-				<string>B95008AC52910B4290B49C61359B9C37</string>
+				<string>5AD6CDBC45C40E34B03655BAE3036865</string>
+				<string>1EF82075B6EC23AA0C6E7D2C29B0546B</string>
+				<string>547133AC6F43F660B2E4E00471F3BB52</string>
+				<string>6C8C620EF2374BA71059BD7F65F69A29</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -705,26 +1001,27 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7395FA44AF81D73462AEB261E4EDFE85</key>
+		<key>6F0AD904D950B95BD95457B425664B4A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9A0B6684446D7CCF69E8ABC9AA590D45</string>
+			<string>D2F000350CDBB925733DB0EA359568A1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
-		<key>73C3AE62FE0CA7AA9285D95ED3FE2086</key>
+		<key>702A72269862853868003FD867F095A8</key>
 		<dict>
-			<key>fileRef</key>
-			<string>E80E899332B0B67E6500F42D027C57CC</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIViewController+Chameleon.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIViewController+Chameleon.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>74857149DC1E0D599B8A01A78349A926</key>
 		<dict>
@@ -818,40 +1115,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>75DB0FB52A385AD9FD4B6432DE6E8F7B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5E960B68691CE74ACB75149447AB4E9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>764994290599C1748674E8213BC3B350</key>
-		<dict>
-			<key>fileRef</key>
-			<string>340EB10E3BCEE3BAE58EEC0E0A2901D1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>764F93220C2ED2A47995A1ADE207FF6A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
 		<key>76B8489480E95C93473DB39351F708C7</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -862,21 +1125,6 @@
 			<string>text.xcconfig</string>
 			<key>path</key>
 			<string>Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78B29AD636AD6C4C4E6E6F96FCFBCB5B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+ChameleonPrivate.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -891,49 +1139,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7A60D2D3E38A0F485CEB338828AFCCD6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1499C9F3DB9FC014806CE8328A1E4F90</string>
-				<string>8681154069529AB10E0C5E3955871D5C</string>
-				<string>7DBE0B4BE8ECD96E713FADEE1C2FB7EC</string>
-				<string>464451E9C149A654E89725EDBCC2B413</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B6973A366E06C007B97473AD90672BF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ChameleonFramework-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7BD792F5AE3B31E300D67F3964361A26</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E20E7C23AF6DC1E20DBC733FC957CB21</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>7BE03F43F45B2E27CA39B825868FECF1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -946,6 +1151,13 @@
 			<string>Pods-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CEF4609876A6581EB94641341725070</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1EF82075B6EC23AA0C6E7D2C29B0546B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
@@ -962,13 +1174,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7DBE0B4BE8ECD96E713FADEE1C2FB7EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0EA16FFF4CF8444A2A3BE3BB9D6174A8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>7FD1C64D5A1264E0D008B16090FA119F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -979,28 +1184,6 @@
 			<string>ChameleonFramework.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8458639DCC5C99EE7B04905FD9645913</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ChameleonFramework.framework</string>
-			<key>path</key>
-			<string>ChameleonFramework.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8681154069529AB10E0C5E3955871D5C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>28D5EF54148F6845BEED329AB8810255</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>87B213035BAC5F75386F62D3C75D2342</key>
 		<dict>
@@ -1015,50 +1198,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8AAA0FFCB74FEE068D52C47F89A0CA78</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7BD792F5AE3B31E300D67F3964361A26</string>
-				<string>75DB0FB52A385AD9FD4B6432DE6E8F7B</string>
-				<string>BC51369ADDE93831FAAEDBA13AA51EE9</string>
-				<string>67A9D4DE39E649D9F334689DE24F7327</string>
-				<string>9B1B2F0E0EBB205694E3AC2840A749B0</string>
-				<string>C8C2CF08E3C24551B46CD7B2940BB9FF</string>
-				<string>18638DF2E3A4D1589BBDBF870705A385</string>
-				<string>2397A625D3911B621FDFF9E1155F9174</string>
-				<string>C0F423D526978EE90906CF4C321D7507</string>
-				<string>7395FA44AF81D73462AEB261E4EDFE85</string>
-				<string>9175BB0428FCA579D2BFB1CFCA3C2067</string>
-				<string>A1CFF5CF671BB7F893FBA991A1F173D2</string>
-				<string>9BE493B4DC1BA0A23B5078FF95A417DF</string>
-				<string>BFBE1352BD6D5BEA063725E4FC596501</string>
-				<string>B33721BB9D114F2D595A84C6503A28AF</string>
-				<string>A0DC357E63DF83280ABDCEBFCF94B49D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8D8E203C08955BAAA0D48EF6A846154E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIAppearance+Swift.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIAppearance+Swift.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8E7AD1910ED7BFF5BFF75DC96155B060</key>
+		<key>87F30BD79A2D053FA63F6596CD9B8081</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1073,10 +1213,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9175BB0428FCA579D2BFB1CFCA3C2067</key>
+		<key>8CA0663D56B7F367ADA083EA6B8ADDE1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F50DBFC0B4642E034CF2D151840A85C2</string>
+			<string>1A9A8A590240AA182E192822FCB11E67</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1087,10 +1227,24 @@
 				</array>
 			</dict>
 		</dict>
-		<key>94FA4C8A06990D4D4499C47CA6D02F22</key>
+		<key>9195C11C8428B6578737364CAEE53EDF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E73695935BD934856E090D3546D11D93</string>
+			<string>E12CA933BE9C1F9B264963A244AC00BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93CDFC9DD5368641F50304457EA71F09</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A320C6AEAB3F01776D8216FC77209851</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1107,7 +1261,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9A0B6684446D7CCF69E8ABC9AA590D45</key>
+		<key>964D4CC591136346EA6226281F32824C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1116,67 +1270,39 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIColor+Chameleon.h</string>
+			<string>UIImage+ChameleonPrivate.h</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIColor+Chameleon.h</string>
+			<string>Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9B1B2F0E0EBB205694E3AC2840A749B0</key>
+		<key>99116C4A4AD6BAAF29DA4D475DAB331E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>8E7AD1910ED7BFF5BFF75DC96155B060</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>FF0F712A3D9FE637D47318A0E774E4C6</string>
+			<key>remoteInfo</key>
+			<string>ChameleonFramework</string>
 		</dict>
-		<key>9BE493B4DC1BA0A23B5078FF95A417DF</key>
+		<key>A320C6AEAB3F01776D8216FC77209851</key>
 		<dict>
-			<key>fileRef</key>
-			<string>47459C7B901406491CECB0708D6510A5</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A0DC357E63DF83280ABDCEBFCF94B49D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EDCBA38C300122667CCD2416108556AE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A1CFF5CF671BB7F893FBA991A1F173D2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>78B29AD636AD6C4C4E6E6F96FCFBCB5B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIButton+Chameleon.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/UIButton+Chameleon.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A5970C7006C07291C2B059E4F89C2236</key>
 		<dict>
@@ -1191,17 +1317,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>A5D89A15B77DE9B7205C9DD263495C9F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>526154C86CA99E71B39AA1B44B5206F3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>A61178CECA2CCD66D230556459A85AD8</key>
 		<dict>
 			<key>fileRef</key>
 			<string>7BE03F43F45B2E27CA39B825868FECF1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A6555178F32C30FCAB96CB58C8057848</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3DA91BC0A82F49B0E42F56DC5953753A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1219,7 +1345,7 @@
 			<array/>
 			<key>dependencies</key>
 			<array>
-				<string>F0A382AA556BCFA42FAC77604A347FFA</string>
+				<string>D0FCB5A4586DED30E283CBFCE284D159</string>
 			</array>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
@@ -1232,32 +1358,32 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>B10921998C74CCA9A44D42E7B7C18F81</key>
+		<key>A7BCFB6C46935D2C48D67C590B363C07</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0575E7550982944F730D4F1A188D775E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF3EAB0DB65F0AA791C6B1C7F61060CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>UINavigationController+Chameleon.m</string>
+			<string>ChameleonShorthand.swift</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UINavigationController+Chameleon.m</string>
+			<string>Pod/Classes/Swift/ChameleonShorthand.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B1E6B6436DE9414F46ED555295D51EA3</key>
+		<key>AF4713876516B74EBC5822CD56C255E3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7B6973A366E06C007B97473AD90672BF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B33721BB9D114F2D595A84C6503A28AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>51807D1A2B94C3B828452CEAF6606891</string>
+			<string>B352E9285ACB12D50ECD9D1E49F59823</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1268,7 +1394,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>B5E960B68691CE74ACB75149447AB4E9</key>
+		<key>B352E9285ACB12D50ECD9D1E49F59823</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1277,9 +1403,24 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ChameleonConstants.h</string>
+			<string>UILabel+Chameleon.h</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/ChameleonConstants.h</string>
+			<string>Pod/Classes/Objective-C/UILabel+Chameleon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B5279945709B51DA055FA4BEBA8E669E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSArray+Chameleon.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/NSArray+Chameleon.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1296,18 +1437,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B95008AC52910B4290B49C61359B9C37</key>
+		<key>B8E9338981F51977C88D849E9E2A4408</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<string>ChameleonFramework-umbrella.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -1326,19 +1467,20 @@
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
 		</dict>
-		<key>BC51369ADDE93831FAAEDBA13AA51EE9</key>
+		<key>BD15CBADC5953669BB8CC28A5541EF99</key>
 		<dict>
-			<key>fileRef</key>
-			<string>0EAC2EC4F8AEA4239AD9BC09C663E8C1</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Chameleon_.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Objective-C/Chameleon_.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BD504989E44457B5CB701AD54AE25D66</key>
 		<dict>
@@ -1354,50 +1496,7 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>BE63C03D72E1ACEDE0CCCFE390CF5E0D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UINavigationController+Chameleon.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UINavigationController+Chameleon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BFBE1352BD6D5BEA063725E4FC596501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BE63C03D72E1ACEDE0CCCFE390CF5E0D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C0F423D526978EE90906CF4C321D7507</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FD683250F8CB65AD016A1C19DF016884</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C13A41846BAB152F205344D5A871C16B</key>
+		<key>C095FC064C90DC6F363631834F53FEC6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1412,91 +1511,39 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C37E3EF9956831A8EAB3B3CEA04C8EE5</key>
+		<key>C35DC7FC67CED7E443F7D93EC2FD5018</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>F143CEB319C87B5055A25B1AA63C91CD</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+ChameleonPrivate.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIView+ChameleonPrivate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C572C70E0F81301A5F427A30F94F8017</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1A710098E52A5D06D5AB3A241823EC25</string>
-			<key>buildSettings</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
 			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>2.1.0</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>2</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>$(CURRENT_PROJECT_VERSION)</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ChameleonFramework/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<key>ATTRIBUTES</key>
 				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
+					<string>Public</string>
 				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ChameleonFramework/ChameleonFramework.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>ChameleonFramework</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
 			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
 		</dict>
-		<key>C5C33254A6BC35ACB4C819B22A243C19</key>
+		<key>C4944D66B3432A56E0B11D765C3A7F93</key>
+		<dict>
+			<key>fileRef</key>
+			<string>574C8B8F80B8ADEB12736D344326C609</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C498FEE8791339163FAA957F0EC5155F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ChameleonShorthand.swift</string>
+			<string>UIAppearance+Swift.h</string>
 			<key>path</key>
-			<string>Pod/Classes/Swift/ChameleonShorthand.swift</string>
+			<string>Pod/Classes/Objective-C/UIAppearance+Swift.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1513,21 +1560,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>C7D5A79B8B7BEE0693B2749692689E61</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSArray+Chameleon.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/NSArray+Chameleon.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>C87D48D38F7CA0B805856453298E6B39</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1541,19 +1573,12 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>C8C2CF08E3C24551B46CD7B2940BB9FF</key>
+		<key>C9030E27473CBC17493081C616ABAE6A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0BE3954ADB4CD734CFE627E8BCFC8B87</string>
+			<string>363602AEF45F7C427AEDEB51BB40574E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>CBC0F7C552B739C909B650A0F42F7F38</key>
 		<dict>
@@ -1568,37 +1593,11 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CC9F53B34CE3BB629827EC0F856F65C2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>280D187D5DC10EDB27C5DA89C9B75568</string>
-				<string>B1E6B6436DE9414F46ED555295D51EA3</string>
-				<string>2F90170DA8F1BCEA0095A3FF6C6103E8</string>
-				<string>EFF1E0D8412590C9150ECA95780DDE7B</string>
-				<string>26C3A93B0FB69CDB72C97DFCE3B23EE3</string>
-				<string>94FA4C8A06990D4D4499C47CA6D02F22</string>
-				<string>764994290599C1748674E8213BC3B350</string>
-				<string>02E0AC93116AA3B7BF487EEBF0C6BFA8</string>
-				<string>4F76F423B82336908459C5C08E3B4A68</string>
-				<string>73C3AE62FE0CA7AA9285D95ED3FE2086</string>
-				<string>1586B09403C4C9E2448C36AC244FE0E2</string>
-				<string>EEC8960474D17D606D5C8B618271CFCF</string>
-				<string>1832537F319155891943D155A172BC43</string>
-				<string>A6555178F32C30FCAB96CB58C8057848</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>CCA510CFBEA2D207524CDA0D73C3B561</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>8458639DCC5C99EE7B04905FD9645913</string>
+				<string>1D170BA2A9063D45C382FD1E7A559859</string>
 				<string>4303967CF9B5565B31668FECBA7DFEE0</string>
 			</array>
 			<key>isa</key>
@@ -1621,11 +1620,35 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>D0FCB5A4586DED30E283CBFCE284D159</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>ChameleonFramework</string>
+			<key>target</key>
+			<string>FF0F712A3D9FE637D47318A0E774E4C6</string>
+			<key>targetProxy</key>
+			<string>99116C4A4AD6BAAF29DA4D475DAB331E</string>
+		</dict>
+		<key>D2F000350CDBB925733DB0EA359568A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ChameleonFramework-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D3DE720D003BAF388F8DD3B456CF45E9</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>C5C33254A6BC35ACB4C819B22A243C19</string>
+				<string>AF3EAB0DB65F0AA791C6B1C7F61060CA</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1669,24 +1692,44 @@
 			<string></string>
 			<key>targets</key>
 			<array>
-				<string>F5290638541A9B3CB61531DA330AEDAF</string>
+				<string>FF0F712A3D9FE637D47318A0E774E4C6</string>
 				<string>A6E40986D2CDCCC5DA05F890D8DAB6E1</string>
 			</array>
 		</dict>
-		<key>D93E66AF6B7CF25AC258114AD2073EB6</key>
+		<key>D67FAEDC15F8D5792F13EEF6CE7AB392</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>5AD6CDBC45C40E34B03655BAE3036865</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>F5290638541A9B3CB61531DA330AEDAF</string>
-			<key>remoteInfo</key>
-			<string>ChameleonFramework</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>E20E7C23AF6DC1E20DBC733FC957CB21</key>
+		<key>DAF2DBB8B057360ECC93BD9487A683D0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6B499DAAE1FB95D7E4D5EF630AE717E5</string>
+				<string>6F0AD904D950B95BD95457B425664B4A</string>
+				<string>E2A9503A61A7F7F8AFCB4969BC829486</string>
+				<string>4418BF936D53B2D3A935D47D0C00EA2B</string>
+				<string>E6D1A3925E6DB3B0A05820D9E4C9E7D3</string>
+				<string>5A9B65A0FB67A5F751664DDFD00B4BD1</string>
+				<string>93CDFC9DD5368641F50304457EA71F09</string>
+				<string>C4944D66B3432A56E0B11D765C3A7F93</string>
+				<string>64AA45E800826E922573EB0E21E388F5</string>
+				<string>6C2D188837BD1E58B960102CAA26340B</string>
+				<string>A7BCFB6C46935D2C48D67C590B363C07</string>
+				<string>A5D89A15B77DE9B7205C9DD263495C9F</string>
+				<string>C9030E27473CBC17493081C616ABAE6A</string>
+				<string>457A03844D9652A9D6C39C15BBDABF25</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E12CA933BE9C1F9B264963A244AC00BD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1700,6 +1743,13 @@
 			<string>Pod/Classes/Objective-C/Chameleon.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E2A9503A61A7F7F8AFCB4969BC829486</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF3EAB0DB65F0AA791C6B1C7F61060CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>E2C85C6E3E6AADA27F78FF69AABCDC76</key>
 		<dict>
@@ -1731,18 +1781,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E73695935BD934856E090D3546D11D93</key>
+		<key>E6D1A3925E6DB3B0A05820D9E4C9E7D3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B5279945709B51DA055FA4BEBA8E669E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7C1FEC87F40AA91D25B62834607EEE1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIAppearance+Swift.m</string>
+			<string>UIViewController+Chameleon.h</string>
 			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIAppearance+Swift.m</string>
+			<string>Pod/Classes/Objective-C/UIViewController+Chameleon.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1759,21 +1816,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E80E899332B0B67E6500F42D027C57CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+ChameleonPrivate.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E8446514FBAD26C0E18F24A5715AEF67</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1787,131 +1829,49 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EDCBA38C300122667CCD2416108556AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIViewController+Chameleon.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIViewController+Chameleon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EEC8960474D17D606D5C8B618271CFCF</key>
+		<key>E99CCD4E8F9BCF4425E10E7A293BD764</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B10921998C74CCA9A44D42E7B7C18F81</string>
+			<string>611245C205589CB9557C0F599561E87C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>EF39FF3F3898729A37B28DEC068A6519</key>
+		<key>EB0A27B8FDA0BFC8766A6B75204A8146</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UILabel+Chameleon.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UILabel+Chameleon.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFF1E0D8412590C9150ECA95780DDE7B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>045A1631A0E861B178A79C12BA522271</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0A382AA556BCFA42FAC77604A347FFA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>ChameleonFramework</string>
-			<key>target</key>
-			<string>F5290638541A9B3CB61531DA330AEDAF</string>
-			<key>targetProxy</key>
-			<string>D93E66AF6B7CF25AC258114AD2073EB6</string>
-		</dict>
-		<key>F50DBFC0B4642E034CF2D151840A85C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIColor+ChameleonPrivate.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F5290638541A9B3CB61531DA330AEDAF</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F6152601BA0BC4E4D58242D132565DD1</string>
-			<key>buildPhases</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>CC9F53B34CE3BB629827EC0F856F65C2</string>
-				<string>7A60D2D3E38A0F485CEB338828AFCCD6</string>
-				<string>8AAA0FFCB74FEE068D52C47F89A0CA78</string>
+				<string>9195C11C8428B6578737364CAEE53EDF</string>
+				<string>E99CCD4E8F9BCF4425E10E7A293BD764</string>
+				<string>2FEBC00383C6867664B23602A2EC9AE4</string>
+				<string>F339AA990D0D29B215CEAEED79D25D47</string>
+				<string>4DA0158884D69F8CE56404640439B816</string>
+				<string>8CA0663D56B7F367ADA083EA6B8ADDE1</string>
+				<string>0D41BDEF7E6A5E73DC725C9479FC60EB</string>
+				<string>0A4738876A6132A5C4459E1437F5DE42</string>
+				<string>4F39B2E4192D65E6C5E9F0ADC0FD2446</string>
+				<string>2DA79FE4889F990E06344C56E19517EA</string>
+				<string>FAB90BEE4852A175037CE8278E73D8C3</string>
+				<string>2680D1E898463B4718B8C32684B2947E</string>
+				<string>AF4713876516B74EBC5822CD56C255E3</string>
+				<string>C35DC7FC67CED7E443F7D93EC2FD5018</string>
+				<string>64A56D08489BC720BD194F5F6BD1E695</string>
+				<string>29DA29D5A41D21FC6FE2DA5583612E86</string>
 			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ChameleonFramework</string>
-			<key>productName</key>
-			<string>ChameleonFramework</string>
-			<key>productReference</key>
-			<string>8458639DCC5C99EE7B04905FD9645913</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>F5608180E5076123261067E1E39AC2F4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ChameleonConstants.m</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/ChameleonConstants.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F6152601BA0BC4E4D58242D132565DD1</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C572C70E0F81301A5F427A30F94F8017</string>
-				<string>5F8CECF29E2B1135E86FFDBF568042CF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
-		<key>F6631D6440E215F53A5273BA8ACCCA19</key>
+		<key>F143CEB319C87B5055A25B1AA63C91CD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1919,10 +1879,26 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UINavigationController+Chameleon.h</string>
 			<key>path</key>
-			<string>ChameleonFramework-umbrella.h</string>
+			<string>Pod/Classes/Objective-C/UINavigationController+Chameleon.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F339AA990D0D29B215CEAEED79D25D47</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B8E9338981F51977C88D849E9E2A4408</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>FA751DE61ACC5A8B18CC7E8D01804FFD</key>
 		<dict>
@@ -1937,6 +1913,20 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>FAB90BEE4852A175037CE8278E73D8C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C8700FA1B19A1658A6E99B0463A1D50</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>FAF88484C61CD91EC48D7D8B66A867E1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1950,20 +1940,30 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FD683250F8CB65AD016A1C19DF016884</key>
+		<key>FF0F712A3D9FE637D47318A0E774E4C6</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurationList</key>
+			<string>35B12A9A0401A00F143433FC102D89DB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>DAF2DBB8B057360ECC93BD9487A683D0</string>
+				<string>4AB675252D1911B09213C9DCE518F133</string>
+				<string>EB0A27B8FDA0BFC8766A6B75204A8146</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>UIButton+Chameleon.h</string>
-			<key>path</key>
-			<string>Pod/Classes/Objective-C/UIButton+Chameleon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>ChameleonFramework</string>
+			<key>productName</key>
+			<string>ChameleonFramework</string>
+			<key>productReference</key>
+			<string>1D170BA2A9063D45C382FD1E7A559859</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
