@@ -26,6 +26,7 @@ class ParentViewController: UIViewController {
         else {
             prefs.setBool(true, forKey: "quickMode")
             isQuick = true
+            quickPlayButton.title = "Quick Play"
         }
         NSNotificationCenter.defaultCenter().postNotificationName("switch", object: isQuick)
     }

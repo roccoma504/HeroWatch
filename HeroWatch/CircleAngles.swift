@@ -69,16 +69,16 @@ class CircleAngles: NSObject {
         
         sortedArray.append(one)
         sortedArray.append(two)
-        //sortedArray.append(three)
+        sortedArray.append(three)
         //sortedArray.append(four)
         
-        sortedArray = sortedArray.sort()
+        //sortedArray = sortedArray.sort()
         
         
         //angleFourEnd = newAngle(addArray(sortedArray, start: 0, finish: 3), max: total)
-        //angleThreeEnd = newAngle(addArray(sortedArray, start: 1, finish: 3), max: total)
-        angleTwoEnd = newAngle(addArray(sortedArray, start: 0, finish: 1), max: total)
-        angleOneEnd = newAngle(addArray(sortedArray, start: 1, finish: 1), max: total)
+        angleThreeEnd = newAngle(addArray(sortedArray, start: 0, finish: 2), max: total)
+        angleTwoEnd = newAngle(addArray(sortedArray, start: 1, finish: 2), max: total)
+        angleOneEnd = newAngle(addArray(sortedArray, start: 2, finish: 2), max: total)
 
 
         

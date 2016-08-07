@@ -12,14 +12,12 @@ import UIKit
 class GeneralTableTableViewController: UITableViewController {
     
     private var receivedData : Array <String>!
-    var colors = [UIColor]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = FlatWhite()
         tableView.tableFooterView = UIView()
-        colors = [FlatMint(),FlatPurple()]
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: receivedData)
         
 

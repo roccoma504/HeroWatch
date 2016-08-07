@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeroWatch/GeneralTableTableViewController.swift"
-            timestampString = "492224275.127392"
+            timestampString = "492225978.529063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeroWatch/GeneralTableTableViewController.swift"
-            timestampString = "492224275.127392"
+            timestampString = "492225978.529063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "loadList(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeroWatch/GraphViewController.swift"
-            timestampString = "492224526.12668"
+            timestampString = "492225978.529063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "switchType(_:)"
             landmarkType = "5">
          </BreakpointContent>

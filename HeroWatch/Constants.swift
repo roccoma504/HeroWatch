@@ -28,6 +28,8 @@ let REGION_ARRAY = ["eu", "us", "kr", "cn", "global"]
 
 let BASE_URL = "https://api.lootbox.eu"
 
+let colors = [FlatMint(),FlatPurple(),FlatPink()]
+
 
 //
 // Hero related constants

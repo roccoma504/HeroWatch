@@ -23,11 +23,11 @@ class GraphViewController: UIViewController {
         case Wins = 0
         case Kills
         case Damage
+        case Medals
     }
     
     private let prefs = NSUserDefaults.standardUserDefaults()
     
-    private var colors = [UIColor]()
     private var stat : StatKind = .Quick
     private var userInfo : User!
     private var quickAllHeroes : AllHeroes!
@@ -129,6 +129,13 @@ class GraphViewController: UIViewController {
             else {
                 angles = CircleAngles(valueOne: self.compAllHeroes.get(.Damage) as! String, valueTwo: self.compAllHeroes.get(.Healing) as! String, labelOne: "Damage", labelTwo: "Healing")
             }
+        case .Medals:
+            if isQuick {
+                angles = CircleAngles(valueOne: self.quickAllHeroes.get(.Gold) as! String, valueTwo: self.quickAllHeroes.get(.Silver) as! String, valueThree: self.quickAllHeroes.get(.Bronze) as! String, labelOne: "Gold", labelTwo: "Silver", labelThree: "Bronze")
+            }
+            else {
+                angles = CircleAngles(valueOne: self.compAllHeroes.get(.Gold) as! String, valueTwo: self.compAllHeroes.get(.Silver) as! String, valueThree: self.compAllHeroes.get(.Bronze) as! String, labelOne: "Gold", labelTwo: "Silver", labelThree: "Bronze")
+            }
             
         }
         
@@ -136,14 +143,14 @@ class GraphViewController: UIViewController {
             
             self.summaryLabel.text = String(angles.get(.Total)).addComma()
             
-            self.displaycircle(self.circleOne,fromAngle: 0, toAngle: angles.get(.EndOne), color: FlatMint(), zPos: 3)
-            self.displaycircle(self.circleTwo, fromAngle: angles.get(.EndOne), toAngle: angles.get(.EndTwo), color: FlatPurple(), zPos: 2)
-            //self.displaycircle(self.circleThree,fromAngle: angles.get(.EndTwo), toAngle: angles.get(.EndThree), color: self.colors[2], zPos: 1)
+            self.displaycircle(self.circleOne,fromAngle: 0, toAngle: angles.get(.EndOne), color: colors[2], zPos: 3)
+            self.displaycircle(self.circleTwo, fromAngle: angles.get(.EndOne), toAngle: angles.get(.EndTwo), color: colors[1], zPos: 2)
+            self.displaycircle(self.circleThree,fromAngle: angles.get(.EndTwo), toAngle: angles.get(.EndThree), color: colors[0], zPos: 1)
             //self.displaycircle(self.circleFour,fromAngle: angles.get(.EndThree), toAngle: angles.get(.EndFour), color: self.colors[3], zPos: 0)
             
             labels.append(angles.get(.LabelOne))
             labels.append(angles.get(.LabelTwo))
-            //labels.append(angles.get(.LabelThree))
+            labels.append(angles.get(.LabelThree))
             //labels.append(angles.get(.LabelFour))
             
             UIUtilities.adjustActivity(self.activityView, stop: true)
@@ -167,10 +174,9 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colors = ColorSchemeOf(.Complementary, color: FlatPurple(), isFlatScheme: true)
-        activityView.color = colors[4]
-        pageControl.numberOfPages = GraphKind.Damage.rawValue + 1
-        pageControl.tintColor = self.colors[4]
+        activityView.color = PRIMARY_COLOR
+        pageControl.numberOfPages = GraphKind.Medals.rawValue + 1
+        pageControl.tintColor = PRIMARY_COLOR
         view.backgroundColor = FlatWhite()
         UIUtilities.adjustAlpha(view, alpha: 0.5)
         summaryLabel.text = "Loading..."
