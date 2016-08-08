@@ -56,8 +56,6 @@ class HeroTableViewController: UITableViewController {
         
         let heroPic = UIImage(named: heroImageMap[items[indexPath.section][indexPath.row]]!)
         
-        let colors = ColorSchemeOf(.Triadic, color: FlatOrange(), isFlatScheme: false)
-        
         cell.heroLabel.text = items[indexPath.section][indexPath.row]
         cell.heroLabel.textColor = FlatBlack()
         cell.backgroundColor = FlatWhite()
