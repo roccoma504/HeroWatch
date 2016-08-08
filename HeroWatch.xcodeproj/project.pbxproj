@@ -193,7 +193,7 @@
 			name = "New Features";
 			sourceTree = "<group>";
 		};
-		3926D03F1D5777FE006A17E4 /* Images */ = {
+		3926D03F1D5777FE006A17E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				3926D0641D577D0C006A17E4 /* bastion.png */,
@@ -218,7 +218,7 @@
 				3926D03D1D5777FE006A17E4 /* zarya.png */,
 				3926D03E1D5777FE006A17E4 /* zenyatta.png */,
 			);
-			name = Images;
+			name = images;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -249,7 +249,7 @@
 				393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */,
 				393D9E921D3EEC76005C8CC2 /* Assets.xcassets */,
 				393D9E8F1D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld */,
-				3926D03F1D5777FE006A17E4 /* Images */,
+				3926D03F1D5777FE006A17E4 /* images */,
 				393D9E941D3EEC76005C8CC2 /* LaunchScreen.storyboard */,
 				393D9E8C1D3EEC76005C8CC2 /* Main.storyboard */,
 				393D9EC91D481E6B005C8CC2 /* Modal */,
