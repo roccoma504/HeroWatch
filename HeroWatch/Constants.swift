@@ -53,7 +53,13 @@ enum heroes {
     case Symmetra
 }
 
-let heroImageMap = ["Soldier: 76":"soldier_76.png",
+let OFFENSE_HEROES = ["Genji","McCree","Pharah","Reaper","Soldier 76","Tracer"]
+let DEFENSE_HEROES = ["Bastion","Hanzo","Junkrat","Mei","Torbjorn","Widowmaker"]
+let TANK_HEROES = ["D.Va","Reinhardt","Roadhog","Winston","Zarya"]
+let SUPPORT_HEROES = ["Lucio","Mercy","Symmetra","Zenyatta"]
+
+
+let heroImageMap = ["Soldier 76":"soldier_76.png",
                     "Hanzo":"hanzo.png",
                     "Pharah":"pharah.png",
                     "Genji":"genji.png",
@@ -61,7 +67,7 @@ let heroImageMap = ["Soldier: 76":"soldier_76.png",
                     "Widowmaker":"widowmaker.png",
                     "Bastion":"bastion.png",
                     "D.Va":"dva.png",
-                    "Torbj&#xF6;rn":"torbjorn.png",
+                    "Torbjorn":"torbjorn.png",
                     "Zenyatta":"zenyatta.png",
                     "McCree":"mcree.png",
                     "Mercy":"mercy.png",
@@ -69,6 +75,10 @@ let heroImageMap = ["Soldier: 76":"soldier_76.png",
                     "Reaper":"reaper.png",
                     "Symmetra":"symmetra.png",
                     "Lucio":"lucio.png",
+                    "Junkrat":"junkrat.png",
+                    "Mei":"mei.png",
+                    "Winston":"winston.png",
+                    "Zarya":"zarya.png",
                     "Reinhardt":"reinhardt.png"]
 
 enum StatKind : String {
@@ -130,7 +140,25 @@ extension String {
         magnitude()
         return newString
     }
+    
+    
 
+}
+
+extension UIImage {
+    var circle: UIImage {
+        let square = size.width < size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.image = self
+        imageView.layer.cornerRadius = square.width/2
+        imageView.layer.masksToBounds = true
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        imageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
 }
 
 

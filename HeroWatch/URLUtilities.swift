@@ -18,8 +18,12 @@ class URLUtilities {
         return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/heroes")!
     }
     
-    static func heroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/hero"+"/"+hero+"/")!
+    static func quickHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/quick-play/hero"+"/"+hero+"/")!
+    }
+    
+    static func compHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/competitve_play/hero"+"/"+hero+"/")!
     }
     
     static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {

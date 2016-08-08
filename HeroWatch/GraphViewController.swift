@@ -175,6 +175,8 @@ class GraphViewController: UIViewController {
             UIUtilities.adjustAlpha(self.view, alpha: 1.0)
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
             
+            self.pageControl.enabled = true
+
         })
     }
     
@@ -182,6 +184,18 @@ class GraphViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue(), {
             self.isQuick =  notification.object as! Bool
             self.checkReady(GraphKind(rawValue: self.pageControl.currentPage)!)
+        })
+    }
+    
+    func reload(notification: NSNotification){
+        dispatch_async(dispatch_get_main_queue(), {
+            UIUtilities.adjustAlpha(self.view, alpha: 0.5)
+            self.summaryLabel.text = "Loading..."
+            self.getUserData()
+            self.pageControl.numberOfPages = GraphKind.Medals.rawValue + 1
+            self.pageControl.enabled = false
+            self.pageControl.currentPage = 0
+
         })
     }
     
@@ -201,6 +215,8 @@ class GraphViewController: UIViewController {
         // add gesture in to view
         view.addGestureRecognizer(swipeGestureLeft)
         view.addGestureRecognizer(swipeGestureRight)
+        
+        pageControl.enabled = false
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -211,12 +227,15 @@ class GraphViewController: UIViewController {
         UIUtilities.adjustAlpha(view, alpha: 0.5)
         summaryLabel.text = "Loading..."
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchType:",name:"switch", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload:",name:"reload", object: nil)
+
         
         getUserData()
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Utility function

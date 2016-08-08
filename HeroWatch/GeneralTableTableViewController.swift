@@ -18,8 +18,9 @@ class GeneralTableTableViewController: UITableViewController {
         view.backgroundColor = FlatWhite()
         tableView.tableFooterView = UIView()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: receivedData)
+
     }
-        
+    
     func loadList(notification: NSNotification){
         dispatch_async(dispatch_get_main_queue(), {
             let arrayObject =  notification.object as! [AnyObject]
@@ -53,6 +54,8 @@ class GeneralTableTableViewController: UITableViewController {
         cell.labelOne.text = receivedData[indexPath.row]
         cell.labelOne.textColor = colors[indexPath.row]
         cell.backgroundColor = FlatWhite()
+        
+        
         
         return cell
     }

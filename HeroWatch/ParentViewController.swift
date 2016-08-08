@@ -31,6 +31,11 @@ class ParentViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName("switch", object: isQuick)
     }
     
+    @IBAction func reloadClick(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
+
+        
+    }
     private func update() {
         title = prefs.stringForKey("id")!.uppercaseString
         prefs.setBool(true, forKey: "quickMode")
