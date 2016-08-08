@@ -23,7 +23,7 @@ class URLUtilities {
     }
     
     static func compHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/competitve_play/hero"+"/"+hero+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/competitive-play/hero"+"/"+hero+"/")!
     }
     
     static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {

@@ -57,6 +57,8 @@
 		3926D06C1D577D24006A17E4 /* pharah.png in Resources */ = {isa = PBXBuildFile; fileRef = 3926D06A1D577D24006A17E4 /* pharah.png */; };
 		3926D06E1D57CFB8006A17E4 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */; };
 		3926D06F1D57CFB8006A17E4 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */; };
+		3926D0711D580D26006A17E4 /* HeroParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0701D580D26006A17E4 /* HeroParentViewController.swift */; };
+		3926D0721D580D26006A17E4 /* HeroParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0701D580D26006A17E4 /* HeroParentViewController.swift */; };
 		393D9E891D3EEC76005C8CC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */; };
 		393D9E8E1D3EEC76005C8CC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393D9E8C1D3EEC76005C8CC2 /* Main.storyboard */; };
 		393D9E911D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393D9E8F1D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld */; };
@@ -124,6 +126,7 @@
 		3926D0651D577D0C006A17E4 /* dva.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dva.png; sourceTree = "<group>"; };
 		3926D06A1D577D24006A17E4 /* pharah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pharah.png; sourceTree = "<group>"; };
 		3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		3926D0701D580D26006A17E4 /* HeroParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroParentViewController.swift; sourceTree = "<group>"; };
 		393D9E851D3EEC76005C8CC2 /* HeroWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393D9E8D1D3EEC76005C8CC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -285,6 +288,7 @@
 				3926D00E1D5676F7006A17E4 /* GeneralTableTableViewController.swift */,
 				3926D0101D56770D006A17E4 /* GeneralTableViewCell.swift */,
 				393D9ECE1D484651005C8CC2 /* GraphViewController.swift */,
+				3926D0701D580D26006A17E4 /* HeroParentViewController.swift */,
 				3926D0121D56DBCA006A17E4 /* HeroTableViewCell.swift */,
 				3926D0141D56DBD6006A17E4 /* HeroTableViewController.swift */,
 				3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */,
@@ -537,6 +541,7 @@
 				393D9ECF1D484651005C8CC2 /* GraphViewController.swift in Sources */,
 				393D9F061D4C4EB3005C8CC2 /* SettingsViewController.swift in Sources */,
 				3926D0131D56DBCA006A17E4 /* HeroTableViewCell.swift in Sources */,
+				3926D0711D580D26006A17E4 /* HeroParentViewController.swift in Sources */,
 				3926D0111D56770D006A17E4 /* GeneralTableViewCell.swift in Sources */,
 				393D9ECD1D483BCA005C8CC2 /* UserInfoViewController.swift in Sources */,
 				393D9EB81D3F1C3E005C8CC2 /* JSONUtilities.swift in Sources */,
@@ -555,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3926D0721D580D26006A17E4 /* HeroParentViewController.swift in Sources */,
 				3926D06F1D57CFB8006A17E4 /* HeroViewController.swift in Sources */,
 				393D9EA11D3EEC77005C8CC2 /* HeroWatchTests.swift in Sources */,
 			);

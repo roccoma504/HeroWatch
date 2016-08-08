@@ -190,7 +190,7 @@ class GraphViewController: UIViewController {
     func reload(notification: NSNotification){
         dispatch_async(dispatch_get_main_queue(), {
             UIUtilities.adjustAlpha(self.view, alpha: 0.5)
-            self.summaryLabel.text = "Loading..."
+            UIUtilities.adjustActivity(self.activityView, stop: false)
             self.getUserData()
             self.pageControl.numberOfPages = GraphKind.Medals.rawValue + 1
             self.pageControl.enabled = false
@@ -225,7 +225,6 @@ class GraphViewController: UIViewController {
         pageControl.tintColor = PRIMARY_COLOR
         view.backgroundColor = FlatWhite()
         UIUtilities.adjustAlpha(view, alpha: 0.5)
-        summaryLabel.text = "Loading..."
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchType:",name:"switch", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload:",name:"reload", object: nil)
 

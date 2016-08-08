@@ -45,10 +45,7 @@ class HeroViewController: UIViewController {
         
     }
     
-    
-    
     func findHero(notification: NSNotification) {
-        
         
         let labelArray = [self.oneLabel, self.twoLabel, self.threeLabel, self.fourLabel, self.fiveLabel, self.sixLabel, self.sevenLabel, self.eightLabel, self.nineLabel]
         let valueArray = [self.oneValue, self.twoValue, self.threeValue, self.fourValue, self.fiveValue, self.sixValue, self.sevenValue, self.eightValue, self.nineValue]
@@ -63,32 +60,17 @@ class HeroViewController: UIViewController {
             UIUtilities.hideView(valueArray[i], hide: true)
         }
         
-        if isQuick {
-            // Retrieve the JSON for the user configuration.
-            JSONUtilities.retrieve(URLUtilities.quickHeroesURL(prefs.stringForKey("console")!, region: prefs.stringForKey("region")!, userID: prefs.stringForKey("id")!,hero: receivedData)) { (json, error) in
-                // If we successfully retrieved
-                if error != nil {
-                    UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
-                }
-                else {
-                    self.updateView(json[self.receivedData] as! [String : AnyObject])
-                }
+        
+        // Retrieve the JSON for the user configuration.
+        JSONUtilities.retrieve(URLUtilities.compHeroesURL(prefs.stringForKey("console")!, region: prefs.stringForKey("region")!, userID: prefs.stringForKey("id")!,hero: receivedData)) { (json, error) in
+            // If we successfully retrieved
+            if error != nil {
+                UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
+            }
+            else {
+                self.updateView(json[self.receivedData] as! [String : AnyObject])
             }
         }
-        else {
-            // Retrieve the JSON for the user configuration.
-            JSONUtilities.retrieve(URLUtilities.compHeroesURL(prefs.stringForKey("console")!, region: prefs.stringForKey("region")!, userID: prefs.stringForKey("id")!,hero: receivedData)) { (json, error) in
-                // If we successfully retrieved
-                if error != nil {
-                    UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
-                }
-                else {
-                    self.updateView(json[self.receivedData] as! [String : AnyObject])
-                }
-            }
-        }
-        
-        
     }
     
     private func updateView(heroStats : [String : AnyObject]) {
@@ -100,8 +82,6 @@ class HeroViewController: UIViewController {
             
             UIUtilities.adjustActivity(self.activityView, stop: true)
             UIUtilities.adjustAlpha(self.view, alpha: 1.0)
-            
-            print(heroStats)
             
             let keyArray = ["Deaths-Average","Eliminations-Average","SoloKills","WeaponAccuracy","EliminationsperLife","GamesPlayed","Medals-Gold","Medals-Silver","Medals-Bronze"]
             let noteArray = ["Avg. Deaths","Avg. Kills.", "Solo Kills","Accuracy","Kills Per Life","Played","Gold","Silver","Bronze"]
@@ -129,16 +109,10 @@ class HeroViewController: UIViewController {
     }
     
     @IBAction func modeButtonClick(sender: AnyObject) {
-        if isQuick {
-            isQuick = false
-            modeButton.title = "Competitive Play"
-        }
-        else {
-            isQuick = true
-            modeButton.title = "Quick Play"
-        }
+        
+        
+        
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
