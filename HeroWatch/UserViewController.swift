@@ -63,19 +63,27 @@ class UserViewController: UIViewController {
             }
             else if json["error"] != nil {
                 UIUtilities.displayAlert(self, title: "Error!", message: json["error"] as! String)
-
-            }
-            else {
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                    self.prefs.setObject(id, forKey: "id")
-                    self.prefs.setObject(console, forKey: "console")
-                    self.prefs.setObject(region, forKey: "region")
-                    self.prefs.setObject(json["level"], forKey: "level")
-                    self.prefs.setObject(json["data"]!["competitive"]!!["rank"] as! String, forKey: "rank")
-                    self.prefs.setObject(json["data"]!["avatar"] as! String, forKey: "avatar")
-                    self.performSegueWithIdentifier("setUpComplete", sender: self)
-                }
                 
+            }
+                
+            else {
+                
+                if let level = json["data"]?["level"], rank = json["data"]?["competitive"]??["rank"], avatar = json["data"]?["avatar"] where rank as? String != nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        self.prefs.setObject(level, forKey: "level")
+                        self.prefs.setObject(rank as! String, forKey: "rank")
+                        self.prefs.setObject(avatar as! String, forKey: "avatar")
+                        self.prefs.setObject(id, forKey: "id")
+                        self.prefs.setObject(console, forKey: "console")
+                        self.prefs.setObject(region, forKey: "region")
+                        self.performSegueWithIdentifier("setUpComplete", sender: self)
+                    }
+
+                }
+                else {
+                    UIUtilities.displayAlert(self, title: "Error!", message: "Unknown error. This sometimes happens if your account doesn't have enough games played. Try playing more.")
+                }
+
             }
             
         }

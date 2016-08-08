@@ -68,16 +68,22 @@ class SettingsViewController: UIViewController {
                 
             }
             else {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.prefs.setObject(id, forKey: "id")
-                    self.prefs.setObject(console, forKey: "console")
-                    self.prefs.setObject(region, forKey: "region")
-                    self.prefs.setObject(json["level"], forKey: "level")
-                    self.prefs.setObject(json["data"]!["competitive"]!!["rank"] as! String, forKey: "rank")
-                    self.prefs.setObject(json["data"]!["avatar"] as! String, forKey: "avatar")
+                if let level = json["data"]?["level"], rank = json["data"]?["competitive"]??["rank"], avatar = json["data"]?["avatar"] where rank as? String != nil {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.prefs.setObject(id, forKey: "id")
+                        self.prefs.setObject(console, forKey: "console")
+                        self.prefs.setObject(region, forKey: "region")
+                        self.prefs.setObject(level, forKey: "level")
+                        self.prefs.setObject(rank as! String, forKey: "rank")
+                        self.prefs.setObject(avatar as! String, forKey: "avatar")
+                        UIUtilities.displayAlert(self, title: "Success!", message: "Information updated.")
                     })
-
-                UIUtilities.displayAlert(self, title: "Success!", message: "Information updated.")
+                    
+                }
+                else {
+                    UIUtilities.displayAlert(self, title: "Error!", message: "Unknown error. This sometimes happens if your account doesn't have enough games played. Try playing more.")
+                }
+                
             }
         }
     }
