@@ -11,14 +11,21 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var blizzardLabel: UILabel!
     @IBOutlet weak var welcomeLabel: UILabel!
+    
+    private let prefs = NSUserDefaults.standardUserDefaults()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.hidesNavigationBarHairline = true
         welcomeLabel.textColor = PRIMARY_COLOR
+        
+        guard prefs.stringForKey("id") == nil else {
+            performSegueWithIdentifier("setupSegue", sender: self)
+            return
+        }
     }
     
     /**
@@ -26,6 +33,6 @@ class WelcomeViewController: UIViewController {
      */
     @IBAction func apiButtonClick(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://lootbox.eu")!)
-
+        
     }
 }

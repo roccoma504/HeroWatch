@@ -69,6 +69,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="welcomeLabel" destination="85t-Ck-ucE" id="kzN-Zy-24Q"/>
+                        <segue destination="OjN-zH-eM8" kind="presentation" identifier="setupSegue" id="obU-c5-tyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,7 +92,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpf-PM-OS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="1135"/>
+            <point key="canvasLocation" x="307.5" y="1122"/>
         </scene>
         <!--User ID-->
         <scene sceneID="m67-yT-mJX">
@@ -1478,6 +1479,6 @@
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aaZ-fg-xWE"/>
+        <segue reference="obU-c5-tyW"/>
     </inferredMetricsTieBreakers>
 </document>
