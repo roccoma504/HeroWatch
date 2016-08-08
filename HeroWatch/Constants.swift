@@ -95,6 +95,10 @@ extension String {
         return self.replace(" ", replacement: "")
     }
     
+    func replaceHash() -> String {
+        return self.replace("#", replacement: "-")
+    }
+    
     func removeColon() -> String {
         return self.replace(":", replacement: "")
     }

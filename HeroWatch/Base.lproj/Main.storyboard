@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ehl-pw-spn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0gT-F7-vcI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -105,13 +105,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your user ID, platform and region." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWO-g8-jzI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your ID (case sensitive)." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWO-g8-jzI">
                                 <rect key="frame" x="20" y="72" width="560" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-1W-3r8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PSN ID, XBL Gamertag, or PC Battlenet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-1W-3r8">
                                 <rect key="frame" x="136" y="140" width="328" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="328" id="4gB-SS-zuf"/>
@@ -458,217 +458,6 @@
             </objects>
             <point key="canvasLocation" x="2431.5" y="1135"/>
         </scene>
-        <!--Add Friend View Controller-->
-        <scene sceneID="xW3-bU-uhi">
-            <objects>
-                <viewController id="dtJ-CG-r9j" customClass="AddFriendViewController" customModule="HeroWatch" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BSk-Qq-rLC"/>
-                        <viewControllerLayoutGuide type="bottom" id="94q-sR-CZb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zmh-L3-PgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter friends user ID, platform and region." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-EI-zjG">
-                                <rect key="frame" x="20" y="72" width="560" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-cI-kB0">
-                                <rect key="frame" x="136" y="140" width="328" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DQq-jk-e8f"/>
-                                    <constraint firstAttribute="height" constant="30" id="bD9-uU-Nhs"/>
-                                    <constraint firstAttribute="width" constant="328" id="ygR-Vr-Nfr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DQq-jk-e8f"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="DQq-jk-e8f"/>
-                                        <exclude reference="bD9-uU-Nhs"/>
-                                        <exclude reference="ygR-Vr-Nfr"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="xkg-ra-137" id="3rN-dW-BWS"/>
-                                </connections>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-EL-uO5">
-                                <rect key="frame" x="99" y="223" width="402" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="QbT-tv-Kar"/>
-                                    <constraint firstAttribute="height" constant="28" id="YFt-jv-JCL"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="PSN"/>
-                                    <segment title="XBL"/>
-                                    <segment title="PC"/>
-                                </segments>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="YFt-jv-JCL"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="QbT-tv-Kar"/>
-                                        <include reference="YFt-jv-JCL"/>
-                                    </mask>
-                                </variation>
-                            </segmentedControl>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="E78-YX-uOb">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <color key="color" red="0.76089900730000004" green="0.25649610160000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-GG-Cvb">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="cI0-Ek-pbL"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="EU"/>
-                                    <segment title="US"/>
-                                    <segment title="KR"/>
-                                    <segment title="CN"/>
-                                </segments>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cI0-Ek-pbL"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="cI0-Ek-pbL"/>
-                                    </mask>
-                                </variation>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-dA-8XI">
-                                <rect key="frame" x="269" y="334" width="63" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="0wr-pC-W7i"/>
-                                    <constraint firstAttribute="height" constant="45" id="efY-vr-N4Y"/>
-                                </constraints>
-                                <state key="normal" title="Add Friend"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0wr-pC-W7i"/>
-                                        <exclude reference="efY-vr-N4Y"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="0wr-pC-W7i"/>
-                                        <include reference="efY-vr-N4Y"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="addFriend:" destination="dtJ-CG-r9j" eventType="touchUpInside" id="6V9-rL-xYg"/>
-                                    <action selector="checkButtonClick:" destination="xkg-ra-137" eventType="touchUpInside" id="j98-jK-6ax"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="94q-sR-CZb" firstAttribute="top" secondItem="CFa-dA-8XI" secondAttribute="bottom" constant="109" id="1df-mL-XYW"/>
-                            <constraint firstItem="fxF-cI-kB0" firstAttribute="trailing" secondItem="DWZ-GG-Cvb" secondAttribute="trailing" id="6ss-lc-70c"/>
-                            <constraint firstItem="V4o-EL-uO5" firstAttribute="leading" secondItem="Zmh-L3-PgQ" secondAttribute="leadingMargin" constant="79" id="9hQ-Dk-kI5"/>
-                            <constraint firstItem="E78-YX-uOb" firstAttribute="top" secondItem="V4o-EL-uO5" secondAttribute="bottom" constant="23" id="B8D-VV-LMa"/>
-                            <constraint firstItem="DWZ-GG-Cvb" firstAttribute="centerX" secondItem="V4o-EL-uO5" secondAttribute="centerX" id="Jav-Hf-dbd"/>
-                            <constraint firstItem="fxF-cI-kB0" firstAttribute="leading" secondItem="Zmh-L3-PgQ" secondAttribute="leadingMargin" constant="16" id="LDU-aN-ZHL"/>
-                            <constraint firstItem="pzW-EI-zjG" firstAttribute="top" secondItem="BSk-Qq-rLC" secondAttribute="bottom" constant="89" id="OVS-aQ-4mN"/>
-                            <constraint firstItem="CFa-dA-8XI" firstAttribute="top" secondItem="E78-YX-uOb" secondAttribute="bottom" constant="8" symbolic="YES" id="OtE-7p-6sI"/>
-                            <constraint firstItem="pzW-EI-zjG" firstAttribute="centerX" secondItem="fxF-cI-kB0" secondAttribute="centerX" id="Pmz-i3-fTs"/>
-                            <constraint firstItem="E78-YX-uOb" firstAttribute="centerX" secondItem="CFa-dA-8XI" secondAttribute="centerX" id="QXT-iL-0jS"/>
-                            <constraint firstItem="fxF-cI-kB0" firstAttribute="leading" secondItem="DWZ-GG-Cvb" secondAttribute="leading" id="VIH-gU-gJs"/>
-                            <constraint firstItem="V4o-EL-uO5" firstAttribute="centerX" secondItem="E78-YX-uOb" secondAttribute="centerX" id="WS6-hn-Brz"/>
-                            <constraint firstItem="DWZ-GG-Cvb" firstAttribute="top" secondItem="fxF-cI-kB0" secondAttribute="bottom" constant="13" id="cMx-47-Mxb"/>
-                            <constraint firstItem="fxF-cI-kB0" firstAttribute="top" secondItem="pzW-EI-zjG" secondAttribute="bottom" constant="8" symbolic="YES" id="eGl-hJ-1RM"/>
-                            <constraint firstItem="V4o-EL-uO5" firstAttribute="top" secondItem="DWZ-GG-Cvb" secondAttribute="bottom" constant="13" id="pje-vb-fc5"/>
-                            <constraint firstItem="pzW-EI-zjG" firstAttribute="trailing" secondItem="Zmh-L3-PgQ" secondAttribute="trailingMargin" id="rLx-88-NgB"/>
-                            <constraint firstItem="pzW-EI-zjG" firstAttribute="leading" secondItem="Zmh-L3-PgQ" secondAttribute="leadingMargin" id="rot-IC-Wlr"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="pzW-EI-zjG"/>
-                                <exclude reference="fxF-cI-kB0"/>
-                                <exclude reference="V4o-EL-uO5"/>
-                                <exclude reference="E78-YX-uOb"/>
-                                <exclude reference="DWZ-GG-Cvb"/>
-                                <exclude reference="CFa-dA-8XI"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="B8D-VV-LMa"/>
-                                <exclude reference="QXT-iL-0jS"/>
-                                <exclude reference="1df-mL-XYW"/>
-                                <exclude reference="Jav-Hf-dbd"/>
-                                <exclude reference="cMx-47-Mxb"/>
-                                <exclude reference="OVS-aQ-4mN"/>
-                                <exclude reference="Pmz-i3-fTs"/>
-                                <exclude reference="rLx-88-NgB"/>
-                                <exclude reference="rot-IC-Wlr"/>
-                                <exclude reference="6ss-lc-70c"/>
-                                <exclude reference="LDU-aN-ZHL"/>
-                                <exclude reference="VIH-gU-gJs"/>
-                                <exclude reference="eGl-hJ-1RM"/>
-                                <exclude reference="9hQ-Dk-kI5"/>
-                                <exclude reference="WS6-hn-Brz"/>
-                                <exclude reference="pje-vb-fc5"/>
-                                <exclude reference="OtE-7p-6sI"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="pzW-EI-zjG"/>
-                                <include reference="fxF-cI-kB0"/>
-                                <include reference="V4o-EL-uO5"/>
-                                <include reference="E78-YX-uOb"/>
-                                <include reference="DWZ-GG-Cvb"/>
-                                <include reference="CFa-dA-8XI"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="B8D-VV-LMa"/>
-                                <include reference="QXT-iL-0jS"/>
-                                <include reference="1df-mL-XYW"/>
-                                <include reference="Jav-Hf-dbd"/>
-                                <include reference="cMx-47-Mxb"/>
-                                <include reference="OVS-aQ-4mN"/>
-                                <include reference="Pmz-i3-fTs"/>
-                                <include reference="rLx-88-NgB"/>
-                                <include reference="rot-IC-Wlr"/>
-                                <include reference="6ss-lc-70c"/>
-                                <include reference="LDU-aN-ZHL"/>
-                                <include reference="VIH-gU-gJs"/>
-                                <include reference="eGl-hJ-1RM"/>
-                                <include reference="9hQ-Dk-kI5"/>
-                                <include reference="WS6-hn-Brz"/>
-                                <include reference="pje-vb-fc5"/>
-                                <include reference="OtE-7p-6sI"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="checkButton" destination="CFa-dA-8XI" id="wwn-CY-7oo"/>
-                        <outlet property="idTextField" destination="fxF-cI-kB0" id="crZ-Ru-9R4"/>
-                        <outlet property="instructionLabel" destination="pzW-EI-zjG" id="6Kz-Sf-LfS"/>
-                        <outlet property="loadingView" destination="E78-YX-uOb" id="WaP-n1-h1q"/>
-                        <outlet property="platformSelector" destination="V4o-EL-uO5" id="JKA-K4-zN1"/>
-                        <outlet property="regionSelector" destination="DWZ-GG-Cvb" id="m2A-E2-0Wa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hgH-GK-tDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1554" y="363"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="X5a-KM-4Dq">
             <objects>
@@ -681,13 +470,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your user ID, platform and region." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2q-qz-dU3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your ID (case sensitive)." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2q-qz-dU3">
                                 <rect key="frame" x="20" y="72" width="560" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-vH-Nth">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PSN ID, XBL Gamertag, or PC Battlenet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-vH-Nth">
                                 <rect key="frame" x="136" y="140" width="328" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jFT-7F-zBn"/>

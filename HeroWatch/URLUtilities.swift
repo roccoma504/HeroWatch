@@ -10,28 +10,37 @@ import UIKit
 
 class URLUtilities {
     
+    private static func fixXBL(platform : String, region : String) -> String {
+        if platform == "xbl" {
+            return "global"
+        }
+        else {
+            return region
+        }
+    }
+    
     static func profileURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/profile")!
+        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/profile")!
     }
     
     static func allHero(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/heroes")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/heroes")!
     }
     
     static func quickHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/quick-play/hero"+"/"+hero+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+hero+"/")!
     }
     
     static func compHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/competitive-play/hero"+"/"+hero+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+hero+"/")!
     }
     
     static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/quick-play/allHeroes/")!
+        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/allHeroes/")!
     }
     
     static func compPlayURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(region)+"/"+(userID)+"/competitive-play/allHeroes/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/allHeroes/")!
     }
     
 }
