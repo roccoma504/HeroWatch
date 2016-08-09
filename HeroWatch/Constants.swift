@@ -53,7 +53,7 @@ enum heroes {
     case Symmetra
 }
 
-let OFFENSE_HEROES = ["Genji","McCree","Pharah","Reaper","Soldier 76","Tracer"]
+let OFFENSE_HEROES = ["Genji","Mccree","Pharah","Reaper","Soldier 76","Tracer"]
 let DEFENSE_HEROES = ["Bastion","Hanzo","Junkrat","Mei","Torbjorn","Widowmaker"]
 let TANK_HEROES = ["D.Va","Reinhardt","Roadhog","Winston","Zarya"]
 let SUPPORT_HEROES = ["Lucio","Mercy","Symmetra","Zenyatta"]
@@ -69,7 +69,7 @@ let heroImageMap = ["Soldier 76":"soldier_76.png",
                     "D.Va":"dva.png",
                     "Torbjorn":"torbjorn.png",
                     "Zenyatta":"zenyatta.png",
-                    "McCree":"mcree.png",
+                    "Mccree":"mcree.png",
                     "Mercy":"mercy.png",
                     "Roadhog":"roadhog.png",
                     "Reaper":"reaper.png",
@@ -82,7 +82,7 @@ let heroImageMap = ["Soldier 76":"soldier_76.png",
                     "Reinhardt":"reinhardt.png"]
 
 enum StatKind : String {
-    case Quick = "QP" 
+    case Quick = "QP"
     case Competitive = "CP"
 }
 
@@ -111,6 +111,19 @@ extension String {
     func removeComma() -> String {
         return self.replace(",", replacement: "")
     }
+    
+    func replaceHeroes() -> String {
+        let badHeroNames = ["Soldier 76","Torbjorn","D.Va"]
+        let fixedHeroesName = ["Soldier76","Torbjoern","DVa"]
+
+        if badHeroNames.contains(self) {
+            return fixedHeroesName[badHeroNames.indexOf(self)!]
+        }
+        else {
+            return self
+        }
+    }
+    
     
     var removeExcessiveSpaces: String {
         let components = self.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
@@ -167,7 +180,6 @@ extension String {
                 newString = newString.insert(comma, ind: self.characters.count - 3)
                 newString = newString.insert(comma, ind: self.characters.count - 6)
                 newString = newString.insert(comma, ind: self.characters.count - 9)
-
             }
         }
         magnitude()
@@ -175,7 +187,7 @@ extension String {
     }
     
     
-
+    
 }
 
 extension UIImage {

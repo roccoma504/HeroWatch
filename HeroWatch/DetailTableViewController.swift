@@ -39,9 +39,7 @@ class DetailTableViewController: UITableViewController {
     
     func handleRefresh(refreshControl: UIRefreshControl) {
         getData()
-        
     }
-    
     
     private func getData () {
         UIUtilities.adjustAlpha(view, alpha: 0.5)
@@ -58,8 +56,6 @@ class DetailTableViewController: UITableViewController {
                         
                         self.tableView.reloadData()
                     })
-                    
-                    
                 }
                 self.refreshControl!.endRefreshing()
                 UIUtilities.adjustAlpha(self.view, alpha: 1.0)
@@ -80,7 +76,6 @@ class DetailTableViewController: UITableViewController {
                         
                         self.tableView.reloadData()
                     })
-                    
                 }
                 self.refreshControl!.endRefreshing()
                 
@@ -89,7 +84,6 @@ class DetailTableViewController: UITableViewController {
             }
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,12 +105,13 @@ class DetailTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
-        if let info = heroInfo {
+        if let info = heroInfo where info[receivedHero]!.count != 0 {
             count = info[receivedHero]!.count
+            if count == 0 {
+                UIUtilities.displayAlert(self, title: "Error", message: "No data found. This is usually because there are no stats for this hero for this play mode.")
+            }
         }
-        else {
-                    UIUtilities.displayAlert(self, title: "Error", message: "No data found. This is usually because there are no stats for this hero for this play mode.")
-        }
+        
         return count
     }
     
@@ -127,7 +122,6 @@ class DetailTableViewController: UITableViewController {
         
         let sortedKeys = Array(dict.keys).sort()
         
-
         cell.keyLabel.text = sortedKeys[indexPath.row].replaceUpper().replaceDash().removeExcessiveSpaces
         cell.valueLabel.text = dict[sortedKeys[indexPath.row]] as? String
         cell.backgroundColor = FlatWhite()

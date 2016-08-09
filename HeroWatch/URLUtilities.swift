@@ -28,11 +28,11 @@ class URLUtilities {
     }
     
     static func quickHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+hero+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+hero.replaceHeroes()+"/")!
     }
     
     static func compHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+hero+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+hero.replaceHeroes()+"/")!
     }
     
     static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {

@@ -82,7 +82,7 @@ class HeroTableViewController: UITableViewController {
         if segue.identifier == "detailSegue" {
             let nvc = segue.destinationViewController as! UINavigationController
             let vc = nvc.childViewControllers[0] as! DetailTableViewController
-            vc.receivedHero = clickedHero
+            vc.receivedHero = clickedHero.replaceHeroes()
         }
     }
     
