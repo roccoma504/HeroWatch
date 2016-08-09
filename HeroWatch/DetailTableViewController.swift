@@ -114,6 +114,9 @@ class DetailTableViewController: UITableViewController {
         if let info = heroInfo {
             count = info[receivedHero]!.count
         }
+        else {
+                    UIUtilities.displayAlert(self, title: "Error", message: "No data found. This is usually because there are no stats for this hero for this play mode.")
+        }
         return count
     }
     
@@ -124,7 +127,7 @@ class DetailTableViewController: UITableViewController {
         
         let sortedKeys = Array(dict.keys).sort()
         
-        
+
         cell.keyLabel.text = sortedKeys[indexPath.row].replaceUpper().replaceDash().removeExcessiveSpaces
         cell.valueLabel.text = dict[sortedKeys[indexPath.row]] as? String
         cell.backgroundColor = FlatWhite()
