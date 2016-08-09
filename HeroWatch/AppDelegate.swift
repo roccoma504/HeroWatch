@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Chameleon.setGlobalThemeUsingPrimaryColor(PRIMARY_COLOR,
                                                   withSecondaryColor: SECONDARY_COLOR,
-                                                  usingFontName: "Helvetica-Light",
+                                                  usingFontName: "Helvetica",
                                                   andContentStyle: UIContentStyle.Contrast)
     
         return true
