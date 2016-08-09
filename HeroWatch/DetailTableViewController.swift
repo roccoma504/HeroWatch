@@ -34,7 +34,6 @@ class DetailTableViewController: UITableViewController {
             modeButton.title = "Quick"
             isQuick = true
         }
-        
     }
     
     func handleRefresh(refreshControl: UIRefreshControl) {
@@ -53,13 +52,11 @@ class DetailTableViewController: UITableViewController {
                 else {
                     self.heroInfo = json
                     dispatch_async(dispatch_get_main_queue(), {
-                        
                         self.tableView.reloadData()
                     })
                 }
                 self.refreshControl!.endRefreshing()
                 UIUtilities.adjustAlpha(self.view, alpha: 1.0)
-                
             }
         }
         else {
@@ -73,12 +70,10 @@ class DetailTableViewController: UITableViewController {
                 else {
                     self.heroInfo = json
                     dispatch_async(dispatch_get_main_queue(), {
-                        
                         self.tableView.reloadData()
                     })
                 }
                 self.refreshControl!.endRefreshing()
-                
                 UIUtilities.adjustAlpha(self.view, alpha: 1.0)
                 
             }
@@ -111,10 +106,8 @@ class DetailTableViewController: UITableViewController {
                 UIUtilities.displayAlert(self, title: "Error", message: "No data found. This is usually because there are no stats for this hero for this play mode.")
             }
         }
-        
         return count
     }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DetailTableViewCell
@@ -123,10 +116,8 @@ class DetailTableViewController: UITableViewController {
         let sortedKeys = Array(dict.keys).sort()
         
         cell.keyLabel.text = sortedKeys[indexPath.row].replaceUpper().replaceDash().removeExcessiveSpaces
-        cell.valueLabel.text = dict[sortedKeys[indexPath.row]] as? String
+        cell.valueLabel.text = (dict[sortedKeys[indexPath.row]] as? String)!.replaceWords()
         cell.backgroundColor = FlatWhite()
-        
-        
         
         return cell
     }

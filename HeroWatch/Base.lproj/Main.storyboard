@@ -1294,15 +1294,14 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="88" y="11" width="64" height="27"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="hwz-Sh-sof" firstAttribute="centerY" secondItem="Du9-Qp-bq7" secondAttribute="centerY" id="DCd-lD-vDp"/>
-                                        <constraint firstItem="hwz-Sh-sof" firstAttribute="leading" secondItem="Du9-Qp-bq7" secondAttribute="leadingMargin" constant="80" id="Mk3-g5-Gde"/>
+                                        <constraint firstItem="hwz-Sh-sof" firstAttribute="leading" secondItem="Du9-Qp-bq7" secondAttribute="leadingMargin" constant="80" id="Mk3-g5-Gde">
+                                            <variation key="widthClass=compact" constant="0.0"/>
+                                        </constraint>
                                         <constraint firstItem="hwz-Sh-sof" firstAttribute="centerX" secondItem="Du9-Qp-bq7" secondAttribute="centerX" id="Pmb-SH-a2K"/>
                                         <constraint firstItem="hwz-Sh-sof" firstAttribute="top" secondItem="Du9-Qp-bq7" secondAttribute="topMargin" constant="3" id="mZ8-QH-XqV"/>
                                     </constraints>

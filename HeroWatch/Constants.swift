@@ -112,6 +112,12 @@ extension String {
         return self.replace(",", replacement: "")
     }
     
+    func replaceWords() -> String {
+        return self.replace("Mostin", replacement: "Most In")
+    }
+
+    
+    
     func replaceHeroes() -> String {
         let badHeroNames = ["Soldier 76","Torbjorn","D.Va"]
         let fixedHeroesName = ["Soldier76","Torbjoern","DVa"]

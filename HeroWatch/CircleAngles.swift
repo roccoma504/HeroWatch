@@ -50,7 +50,7 @@ class CircleAngles: NSObject {
     }
     
     private func formatedString(title : String, value : Float, percentage: Float) -> String {
-        return title + " " + String(Int(value)).addComma() + "/" + String(Int(percentage)) + "%"
+        return title + " " + String(Int(value)).addComma() + " (" + String(Int(percentage)) + "%" + ")"
     }
     
     private func newAngle(count : Float, max : Float) -> Int {
