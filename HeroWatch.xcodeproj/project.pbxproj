@@ -59,6 +59,8 @@
 		3926D06F1D57CFB8006A17E4 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */; };
 		3926D0711D580D26006A17E4 /* HeroParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0701D580D26006A17E4 /* HeroParentViewController.swift */; };
 		3926D0721D580D26006A17E4 /* HeroParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0701D580D26006A17E4 /* HeroParentViewController.swift */; };
+		3926D0741D59554B006A17E4 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0731D59554B006A17E4 /* DetailTableViewController.swift */; };
+		3926D0761D59555D006A17E4 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3926D0751D59555D006A17E4 /* DetailTableViewCell.swift */; };
 		393D9E891D3EEC76005C8CC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */; };
 		393D9E8E1D3EEC76005C8CC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393D9E8C1D3EEC76005C8CC2 /* Main.storyboard */; };
 		393D9E911D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 393D9E8F1D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld */; };
@@ -127,6 +129,8 @@
 		3926D06A1D577D24006A17E4 /* pharah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pharah.png; sourceTree = "<group>"; };
 		3926D06D1D57CFB8006A17E4 /* HeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		3926D0701D580D26006A17E4 /* HeroParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroParentViewController.swift; sourceTree = "<group>"; };
+		3926D0731D59554B006A17E4 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		3926D0751D59555D006A17E4 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		393D9E851D3EEC76005C8CC2 /* HeroWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393D9E8D1D3EEC76005C8CC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				3926D0161D56E03F006A17E4 /* AboutViewController.swift */,
+				3926D0751D59555D006A17E4 /* DetailTableViewCell.swift */,
+				3926D0731D59554B006A17E4 /* DetailTableViewController.swift */,
 				3926D00E1D5676F7006A17E4 /* GeneralTableTableViewController.swift */,
 				3926D0101D56770D006A17E4 /* GeneralTableViewCell.swift */,
 				393D9ECE1D484651005C8CC2 /* GraphViewController.swift */,
@@ -530,6 +536,7 @@
 				393D9EC81D481E66005C8CC2 /* AllHeroes.swift in Sources */,
 				3926D00C1D558558006A17E4 /* ParentViewController.swift in Sources */,
 				393D9EB21D3F028C005C8CC2 /* UIUtilities.swift in Sources */,
+				3926D0741D59554B006A17E4 /* DetailTableViewController.swift in Sources */,
 				397E23851D500DBC0094F72D /* CompareTableViewCell.swift in Sources */,
 				393D9EAE1D3EF24D005C8CC2 /* Constants.swift in Sources */,
 				3926D06E1D57CFB8006A17E4 /* HeroViewController.swift in Sources */,
@@ -553,6 +560,7 @@
 				393D9E911D3EEC76005C8CC2 /* HeroWatch.xcdatamodeld in Sources */,
 				393D9E891D3EEC76005C8CC2 /* AppDelegate.swift in Sources */,
 				397E237B1D4D87700094F72D /* FriendTableViewCell.swift in Sources */,
+				3926D0761D59555D006A17E4 /* DetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

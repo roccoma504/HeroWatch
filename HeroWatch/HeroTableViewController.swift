@@ -15,6 +15,7 @@ class HeroTableViewController: UITableViewController {
     private let prefs = NSUserDefaults.standardUserDefaults()
     private let items = [OFFENSE_HEROES, DEFENSE_HEROES, TANK_HEROES,SUPPORT_HEROES]
     private var receivedData : Array <String>!
+    private var clickedHero : String!
     
     
     override func viewDidLoad() {
@@ -73,7 +74,14 @@ class HeroTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        NSNotificationCenter.defaultCenter().postNotificationName("pickedHero", object: items[indexPath.section][indexPath.row])
+        clickedHero = items[indexPath.section][indexPath.row]
+        performSegueWithIdentifier("detailSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nvc = segue.destinationViewController as! UINavigationController
+        let vc = nvc.childViewControllers[0] as! DetailTableViewController
+        vc.receivedHero = clickedHero
     }
     
 }

@@ -1,64 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "Images">
-      <FileRef
-         location = "group:genji.png">
-      </FileRef>
-      <FileRef
-         location = "group:hanzo.png">
-      </FileRef>
-      <FileRef
-         location = "group:junkrat.png">
-      </FileRef>
-      <FileRef
-         location = "group:lucio.png">
-      </FileRef>
-      <FileRef
-         location = "group:mcree.png">
-      </FileRef>
-      <FileRef
-         location = "group:mei.png">
-      </FileRef>
-      <FileRef
-         location = "group:mercy.png">
-      </FileRef>
-      <FileRef
-         location = "group:reaper.png">
-      </FileRef>
-      <FileRef
-         location = "group:reinhardt.png">
-      </FileRef>
-      <FileRef
-         location = "group:roadhog.png">
-      </FileRef>
-      <FileRef
-         location = "group:soldier_76.png">
-      </FileRef>
-      <FileRef
-         location = "group:symmetra.png">
-      </FileRef>
-      <FileRef
-         location = "group:torbjorn.png">
-      </FileRef>
-      <FileRef
-         location = "group:tracer.png">
-      </FileRef>
-      <FileRef
-         location = "group:widowmaker.png">
-      </FileRef>
-      <FileRef
-         location = "group:winston.png">
-      </FileRef>
-      <FileRef
-         location = "group:zarya.png">
-      </FileRef>
-      <FileRef
-         location = "group:zenyatta.png">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:HeroWatch.xcodeproj">
    </FileRef>

@@ -86,6 +86,8 @@ enum StatKind : String {
     case Competitive = "CP"
 }
 
+
+
 extension String {
     private func replace(string:String, replacement:String) -> String {
         return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
@@ -98,6 +100,9 @@ extension String {
     func replaceHash() -> String {
         return self.replace("#", replacement: "-")
     }
+    func replaceDash() -> String {
+        return self.replace("-", replacement: " ")
+    }
     
     func removeColon() -> String {
         return self.replace(":", replacement: "")
@@ -106,6 +111,13 @@ extension String {
     func removeComma() -> String {
         return self.replace(",", replacement: "")
     }
+    
+    var removeExcessiveSpaces: String {
+        let components = self.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let filtered = components.filter({!$0.isEmpty})
+        return filtered.joinWithSeparator("  ")
+    }
+    
     func trunc(length: Int, trailing: String? = "") -> String {
         if self.characters.count > length {
             return self.substringToIndex(self.startIndex.advancedBy(length)) + (trailing ?? "")
@@ -116,6 +128,23 @@ extension String {
     
     func insert(string:String,ind:Int) -> String {
         return  String(self.characters.prefix(ind)) + string + String(self.characters.suffix(self.characters.count-ind))
+    }
+    
+    func replaceUpper() -> String {
+        
+        var result = ""
+        var characters = Array(self.characters)
+        result += String(characters[0])
+        for i in 1 ..< characters.count {
+            let s = String(characters[i])
+            if s == s.uppercaseString {
+                result += " "
+                result += s.uppercaseString
+            } else {
+                result += s.lowercaseString
+            }
+        }
+        return result
     }
     
     
