@@ -18,6 +18,7 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var circleFour: KDCircularProgress!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     
     private enum GraphKind : Int {
         case Wins = 0
@@ -166,17 +167,28 @@ class GraphViewController: UIViewController {
             labels.append(angles.get(.LabelTwo))
             
             if displayThree {
-                
                 labels.append(angles.get(.LabelThree))
-                
             }
             
             UIUtilities.adjustActivity(self.activityView, stop: true)
             UIUtilities.adjustAlpha(self.view, alpha: 1.0)
+            
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
             
             self.pageControl.enabled = true
-
+            
+            if self.isQuick {
+                if let level = self.userInfo.get(.Level) as? Int {
+                    self.levelLabel.text = "Quick Play : " + String(level)
+                    UIUtilities.hideView(self.levelLabel, hide: false)
+                }
+            }
+            else {
+                if let rank = self.userInfo.get(.Rank) as? String {
+                    self.levelLabel.text = "Competitive Play : " + String(rank)
+                    UIUtilities.hideView(self.levelLabel, hide: false)
+                }
+            }
         })
     }
     
@@ -195,7 +207,9 @@ class GraphViewController: UIViewController {
             self.pageControl.numberOfPages = GraphKind.Medals.rawValue + 1
             self.pageControl.enabled = false
             self.pageControl.currentPage = 0
-
+            UIUtilities.hideView(self.levelLabel, hide: true)
+            
+            
         })
     }
     
@@ -225,9 +239,10 @@ class GraphViewController: UIViewController {
         pageControl.tintColor = PRIMARY_COLOR
         view.backgroundColor = FlatWhite()
         UIUtilities.adjustAlpha(view, alpha: 0.5)
+        UIUtilities.hideView(levelLabel, hide: true)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchType:",name:"switch", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload:",name:"reload", object: nil)
-
+        
         
         getUserData()
         

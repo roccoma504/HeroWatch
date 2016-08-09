@@ -1086,6 +1086,15 @@
                                         <color key="textColor" red="0.76089900732040405" green="0.25649610161781311" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-Lm-6LV">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" red="0.76089900732040405" green="0.25649610161781311" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-15" y="8" width="360" height="33"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1137,6 +1146,7 @@
                                     <mask key="subviews">
                                         <exclude reference="per-My-HyB"/>
                                         <exclude reference="G1L-Lr-hOD"/>
+                                        <exclude reference="HJg-Lm-6LV"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="dIm-o6-69N"/>
@@ -1151,6 +1161,7 @@
                                     <mask key="subviews">
                                         <include reference="per-My-HyB"/>
                                         <include reference="G1L-Lr-hOD"/>
+                                        <include reference="HJg-Lm-6LV"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="dIm-o6-69N"/>
@@ -1249,6 +1260,7 @@
                         <outlet property="circleOne" destination="icV-R7-T3a" id="YfF-wm-GDD"/>
                         <outlet property="circleThree" destination="kSA-hu-lbZ" id="RmV-CS-laq"/>
                         <outlet property="circleTwo" destination="qqU-0W-XJa" id="t8g-fS-JN6"/>
+                        <outlet property="levelLabel" destination="HJg-Lm-6LV" id="vcO-yP-FVv"/>
                         <outlet property="pageControl" destination="per-My-HyB" id="7at-yK-KxV"/>
                         <outlet property="summaryLabel" destination="G1L-Lr-hOD" id="frN-Kv-bwf"/>
                     </connections>
