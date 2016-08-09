@@ -79,9 +79,11 @@ class HeroTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nvc = segue.destinationViewController as! UINavigationController
-        let vc = nvc.childViewControllers[0] as! DetailTableViewController
-        vc.receivedHero = clickedHero
+        if segue.identifier == "detailSegue" {
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.childViewControllers[0] as! DetailTableViewController
+            vc.receivedHero = clickedHero
+        }
     }
     
 }

@@ -585,6 +585,13 @@
                                 <exclude reference="Qo0-q9-S4O"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="MJh-Sp-0c6"/>
+                                <exclude reference="jem-xa-UTh"/>
+                                <exclude reference="ubB-Kv-6RQ"/>
+                                <exclude reference="1Ea-KS-bfD"/>
+                                <exclude reference="FKu-G1-tKa"/>
+                                <exclude reference="JeY-Xf-Yt9"/>
+                                <exclude reference="MFO-EB-tr6"/>
                                 <exclude reference="Xcr-bf-cgS"/>
                                 <exclude reference="ZRP-iT-p2H"/>
                                 <exclude reference="ubL-7h-75a"/>
@@ -593,16 +600,9 @@
                                 <exclude reference="WiN-B7-2au"/>
                                 <exclude reference="li5-ex-Gxw"/>
                                 <exclude reference="zPO-gx-riN"/>
-                                <exclude reference="1Ea-KS-bfD"/>
-                                <exclude reference="FKu-G1-tKa"/>
-                                <exclude reference="JeY-Xf-Yt9"/>
-                                <exclude reference="MFO-EB-tr6"/>
                                 <exclude reference="Mve-I5-TiI"/>
                                 <exclude reference="wrZ-R4-CDD"/>
-                                <exclude reference="MJh-Sp-0c6"/>
-                                <exclude reference="jem-xa-UTh"/>
                                 <exclude reference="fyP-Ed-ebx"/>
-                                <exclude reference="ubB-Kv-6RQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -615,6 +615,13 @@
                                 <include reference="Qo0-q9-S4O"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="MJh-Sp-0c6"/>
+                                <include reference="jem-xa-UTh"/>
+                                <include reference="ubB-Kv-6RQ"/>
+                                <include reference="1Ea-KS-bfD"/>
+                                <include reference="FKu-G1-tKa"/>
+                                <include reference="JeY-Xf-Yt9"/>
+                                <include reference="MFO-EB-tr6"/>
                                 <include reference="Xcr-bf-cgS"/>
                                 <include reference="ZRP-iT-p2H"/>
                                 <include reference="ubL-7h-75a"/>
@@ -623,16 +630,9 @@
                                 <include reference="WiN-B7-2au"/>
                                 <include reference="li5-ex-Gxw"/>
                                 <include reference="zPO-gx-riN"/>
-                                <include reference="1Ea-KS-bfD"/>
-                                <include reference="FKu-G1-tKa"/>
-                                <include reference="JeY-Xf-Yt9"/>
-                                <include reference="MFO-EB-tr6"/>
                                 <include reference="Mve-I5-TiI"/>
                                 <include reference="wrZ-R4-CDD"/>
-                                <include reference="MJh-Sp-0c6"/>
-                                <include reference="jem-xa-UTh"/>
                                 <include reference="fyP-Ed-ebx"/>
-                                <include reference="ubB-Kv-6RQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -1085,6 +1085,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" red="0.76089900732040405" green="0.25649610161781311" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="71" y="173" width="188" height="0.0"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-Lm-6LV">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1291,6 +1294,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="88" y="11" width="64" height="27"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
@@ -1391,12 +1397,12 @@
                                             <exclude reference="8OM-Qs-VEf"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="SQE-QX-YQy"/>
+                                            <exclude reference="q61-HQ-01T"/>
                                             <exclude reference="37S-pj-cV4"/>
                                             <exclude reference="3uf-SJ-gfW"/>
                                             <exclude reference="g35-Jm-csO"/>
                                             <exclude reference="qmC-5h-bxC"/>
-                                            <exclude reference="SQE-QX-YQy"/>
-                                            <exclude reference="q61-HQ-01T"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -1405,12 +1411,12 @@
                                             <include reference="8OM-Qs-VEf"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="SQE-QX-YQy"/>
+                                            <include reference="q61-HQ-01T"/>
                                             <include reference="37S-pj-cV4"/>
                                             <include reference="3uf-SJ-gfW"/>
                                             <include reference="g35-Jm-csO"/>
                                             <include reference="qmC-5h-bxC"/>
-                                            <include reference="SQE-QX-YQy"/>
-                                            <include reference="q61-HQ-01T"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -1446,12 +1452,15 @@
             <objects>
                 <tableViewController id="YaH-6t-Nv7" customClass="DetailTableViewController" customModule="HeroWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wEq-5K-Anc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="40" id="mUV-sB-xXg" customClass="DetailTableViewCell" customModule="HeroWatch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mUV-sB-xXg" id="Gv3-6o-ygo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PN8-9z-SoC">
@@ -1570,7 +1579,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHK-hj-SQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5088" y="1821"/>
+            <point key="canvasLocation" x="3139.5" y="2513"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tBe-Zd-lcd">
