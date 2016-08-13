@@ -87,6 +87,8 @@
 		397E23811D4EB4460094F72D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E23801D4EB4460094F72D /* Friend.swift */; };
 		397E23831D500DA90094F72D /* CompareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E23821D500DA90094F72D /* CompareTableViewController.swift */; };
 		397E23851D500DBC0094F72D /* CompareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E23841D500DBC0094F72D /* CompareTableViewCell.swift */; };
+		39E739C31D5FC8CB0028CF39 /* ana.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E739C21D5FC8CB0028CF39 /* ana.png */; };
+		39E739C51D5FCC2F0028CF39 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E739C41D5FCC2F0028CF39 /* splash.jpg */; };
 		436913C21367AD6476A92013 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C421D84A71F3E5B678BBC72D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -162,6 +164,8 @@
 		397E23801D4EB4460094F72D /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		397E23821D500DA90094F72D /* CompareTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareTableViewController.swift; sourceTree = "<group>"; };
 		397E23841D500DBC0094F72D /* CompareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareTableViewCell.swift; sourceTree = "<group>"; };
+		39E739C21D5FC8CB0028CF39 /* ana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ana.png; sourceTree = "<group>"; };
+		39E739C41D5FCC2F0028CF39 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash.jpg; sourceTree = "<group>"; };
 		82F09A6ADC985E48E5C84A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C421D84A71F3E5B678BBC72D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69DF52D1C68681D2DF1BCA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		3926D03F1D5777FE006A17E4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				39E739C21D5FC8CB0028CF39 /* ana.png */,
 				3926D0641D577D0C006A17E4 /* bastion.png */,
 				3926D0651D577D0C006A17E4 /* dva.png */,
 				3926D02D1D5777FE006A17E4 /* genji.png */,
@@ -252,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				3926D07D1D5A9330006A17E4 /* icon.jpg */,
+				39E739C41D5FCC2F0028CF39 /* splash.jpg */,
 				393D9E971D3EEC76005C8CC2 /* Info.plist */,
 				393D9E881D3EEC76005C8CC2 /* AppDelegate.swift */,
 				393D9E921D3EEC76005C8CC2 /* Assets.xcassets */,
@@ -435,6 +441,7 @@
 				3926D04A1D5777FE006A17E4 /* mei.png in Resources */,
 				3926D0401D5777FE006A17E4 /* genji.png in Resources */,
 				3926D07E1D5A9330006A17E4 /* icon.jpg in Resources */,
+				39E739C51D5FCC2F0028CF39 /* splash.jpg in Resources */,
 				3926D0661D577D0C006A17E4 /* bastion.png in Resources */,
 				3926D0561D5777FE006A17E4 /* symmetra.png in Resources */,
 				393D9E931D3EEC76005C8CC2 /* Assets.xcassets in Resources */,
@@ -443,6 +450,7 @@
 				393D9E8E1D3EEC76005C8CC2 /* Main.storyboard in Resources */,
 				3926D05E1D5777FE006A17E4 /* winston.png in Resources */,
 				3926D04E1D5777FE006A17E4 /* reaper.png in Resources */,
+				39E739C31D5FC8CB0028CF39 /* ana.png in Resources */,
 				3926D0521D5777FE006A17E4 /* roadhog.png in Resources */,
 				3926D0681D577D0C006A17E4 /* dva.png in Resources */,
 				3926D0441D5777FE006A17E4 /* junkrat.png in Resources */,

@@ -31,32 +31,10 @@ let BASE_URL = "https://api.lootbox.eu"
 let colors = [FlatMint(),FlatPurple(),FlatPink()]
 
 
-//
-// Hero related constants
-//
-
-enum heroes {
-    case Soldier76
-    case Hanzo
-    case Pharah
-    case Genji
-    case Tracer
-    case Widowmaker
-    case Bastion
-    case Dva
-    case Torbjorn
-    case Zenyatta
-    case McCree
-    case Mercy
-    case Roadhog
-    case Reaper
-    case Symmetra
-}
-
 let OFFENSE_HEROES = ["Genji","Mccree","Pharah","Reaper","Soldier 76","Tracer"]
 let DEFENSE_HEROES = ["Bastion","Hanzo","Junkrat","Mei","Torbjorn","Widowmaker"]
 let TANK_HEROES = ["D.Va","Reinhardt","Roadhog","Winston","Zarya"]
-let SUPPORT_HEROES = ["Lucio","Mercy","Symmetra","Zenyatta"]
+let SUPPORT_HEROES = ["Ana","Lucio","Mercy","Symmetra","Zenyatta"]
 
 
 let heroImageMap = ["Soldier 76":"soldier_76.png",
@@ -79,13 +57,13 @@ let heroImageMap = ["Soldier 76":"soldier_76.png",
                     "Mei":"mei.png",
                     "Winston":"winston.png",
                     "Zarya":"zarya.png",
-                    "Reinhardt":"reinhardt.png"]
+                    "Reinhardt":"reinhardt.png",
+                    "Ana":"ana.png"]
 
 enum StatKind : String {
     case Quick = "QP"
     case Competitive = "CP"
 }
-
 
 
 extension String {
@@ -115,13 +93,13 @@ extension String {
     func replaceWords() -> String {
         return self.replace("Mostin", replacement: "Most In")
     }
-
+    
     
     
     func replaceHeroes() -> String {
         let badHeroNames = ["Soldier 76","Torbjorn","D.Va"]
         let fixedHeroesName = ["Soldier76","Torbjoern","DVa"]
-
+        
         if badHeroNames.contains(self) {
             return fixedHeroesName[badHeroNames.indexOf(self)!]
         }

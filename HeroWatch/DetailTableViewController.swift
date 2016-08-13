@@ -100,7 +100,7 @@ class DetailTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
-        if let info = heroInfo where info[receivedHero]!.count != 0 {
+        if let info = heroInfo {
             count = info[receivedHero]!.count
             if count == 0 {
                 UIUtilities.displayAlert(self, title: "Error", message: "No data found. This is usually because there are no stats for this hero for this play mode.")
