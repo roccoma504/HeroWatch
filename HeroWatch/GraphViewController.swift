@@ -256,7 +256,7 @@ class GraphViewController: UIViewController {
     
     // increase page number on swift left
     func handleSwipeLeft(gesture: UISwipeGestureRecognizer){
-        if self.pageControl.currentPage < 9 {
+        if self.pageControl.currentPage < self.pageControl.numberOfPages - 1 {
             self.pageControl.currentPage += 1
             update(GraphKind(rawValue: self.pageControl.currentPage)!)
         }
