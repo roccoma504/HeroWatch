@@ -12,10 +12,16 @@ import UIKit
 class HeroTableViewController: UITableViewController {
     
     private let section = ["Offense","Defense","Tank","Support"]
+    private let singleSection = ["All Heroes"]
     private let prefs = NSUserDefaults.standardUserDefaults()
-    private let items = [OFFENSE_HEROES, DEFENSE_HEROES, TANK_HEROES,SUPPORT_HEROES]
+    private let herosByClass = [OFFENSE_HEROES, DEFENSE_HEROES, TANK_HEROES, SUPPORT_HEROES]
+    private var herosByName = [OFFENSE_HEROES + DEFENSE_HEROES + TANK_HEROES + SUPPORT_HEROES]
+    private var heroesToDisplay = [OFFENSE_HEROES, DEFENSE_HEROES, TANK_HEROES, SUPPORT_HEROES]
+    private var sectionToDisplay = ["Offense","Defense","Tank","Support"]
+
     private var receivedData : Array <String>!
     private var clickedHero : String!
+    @IBOutlet weak var sortButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -30,14 +36,14 @@ class HeroTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return self.section[section]
+        return self.sectionToDisplay[section]
         
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         
-        return self.section.count
+        return self.sectionToDisplay.count
         
     }
     
@@ -47,7 +53,7 @@ class HeroTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items[section].count
+        return heroesToDisplay[section].count
     }
     
     
@@ -55,9 +61,9 @@ class HeroTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! HeroTableViewCell
         
-        let heroPic = UIImage(named: heroImageMap[items[indexPath.section][indexPath.row]]!)
+        let heroPic = UIImage(named: heroImageMap[heroesToDisplay[indexPath.section][indexPath.row]]!)
         
-        cell.heroLabel.text = items[indexPath.section][indexPath.row]
+        cell.heroLabel.text = heroesToDisplay[indexPath.section][indexPath.row]
         cell.heroLabel.textColor = FlatBlack()
         cell.backgroundColor = FlatWhite()
         
@@ -73,8 +79,30 @@ class HeroTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func sortButtonClick(sender: AnyObject) {
+        
+        if sortButton.title == "Sort By Class" {
+            sortButton.title = "Sort By Name"
+            herosByName[0].sortInPlace()
+            print(herosByName[0])
+            heroesToDisplay = herosByName
+            sectionToDisplay = singleSection
+        }
+        else {
+            sortButton.title = "Sort By Class"
+            heroesToDisplay = herosByClass
+            sectionToDisplay = section
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()
+        })
+        
+    }
+    
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        clickedHero = items[indexPath.section][indexPath.row]
+        clickedHero = heroesToDisplay[indexPath.section][indexPath.row]
         performSegueWithIdentifier("detailSegue", sender: self)
     }
     

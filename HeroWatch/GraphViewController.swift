@@ -19,6 +19,7 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     private enum GraphKind : Int {
         case Wins = 0
@@ -37,6 +38,7 @@ class GraphViewController: UIViewController {
     private var quickIsReady = false
     private var compIsReady = false
     private var isQuick = true
+    private var isErrored = false
     
     // create swipe gesture
     let swipeGestureLeft = UISwipeGestureRecognizer()
@@ -48,7 +50,17 @@ class GraphViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     
     private func checkReady(kind : GraphKind) {
-        if userIsReady && compIsReady && quickIsReady {
+        if isErrored {
+            dispatch_async(dispatch_get_main_queue(), {
+                UIUtilities.displayAlert(self, title: "Error!", message: "Unknown error. Please try again later.")
+                UIUtilities.adjustActivity(self.activityView, stop: true)
+                UIUtilities.adjustAlpha(self.view, alpha: 1.0)
+                self.errorLabel.hidden = false
+                self.pageControl.hidden = true
+            })
+            
+        }
+        else if userIsReady && compIsReady && quickIsReady {
             self.update(kind)
         }
     }
@@ -67,16 +79,23 @@ class GraphViewController: UIViewController {
     }
     
     private func getUserData() {
+        
+        errorLabel.hidden = true
+        
         // Retrieve the JSON for the user configuration.
         JSONUtilities.retrieve(URLUtilities.profileURL(prefs.stringForKey("console")!, region: prefs.stringForKey("region")!, userID: prefs.stringForKey("id")!)) { (json, error) in
             // If we successfully retrieved
             if error != nil {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
+                self.userIsReady = true
+                self.isErrored = true
+                self.checkReady(.Wins)
             }
             else {
                 self.userInfo = User(JSON: json)
                 self.userIsReady = true
                 self.checkReady(.Wins)
+                
             }
         }
         
@@ -85,6 +104,9 @@ class GraphViewController: UIViewController {
             // If we successfully retrieved
             if error != nil {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
+                self.userIsReady = true
+                self.isErrored = true
+                self.checkReady(.Wins)
             }
             else {
                 self.quickAllHeroes = AllHeroes(JSON: json)
@@ -97,6 +119,9 @@ class GraphViewController: UIViewController {
             // If we successfully retrieved
             if error != nil {
                 UIUtilities.displayAlert(self, title: "Error!", message: (error?.localizedDescription)!)
+                self.isErrored = true
+                self.compIsReady = true
+                self.checkReady(.Wins)
             }
             else {
                 self.compAllHeroes = AllHeroes(JSON: json)
@@ -176,6 +201,7 @@ class GraphViewController: UIViewController {
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: labels)
             
             self.pageControl.enabled = true
+            self.pageControl.hidden = false
             
             if self.isQuick {
                 if let level = self.userInfo.get(.Level) as? Int {
